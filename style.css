@@ -50,6 +50,40 @@ li a:hover {
 
 #icon-apps {
     max-height: 20px;
-    padding: 10px;
-    padding-top: 0px;
+    margin: 10px;
+}
+
+.background-hover {
+    background-color: #ffffff;
+    height: 40px;
+    position: relative;
+    top: -10px;
+    border-radius: 50%;
+}
+
+.background-hover:hover {
+    background-color: #f0f0f0;
+}
+
+#profile-hover {
+    visibility: hidden;
+    background: #505355;
+    width: 150px;
+    position: absolute;
+    right: 10px;
+    top: 55px;
+    border-radius: 5px;
+    padding: 5px 0px 5px 5px;
+}
+
+#created-by {
+    color: #ffffff !important;
+}
+
+#profile-hover > p {
+    color: #b8babe;
+}
+
+#profile-link:hover + #profile-hover {
+    visibility: visible;
 }
