@@ -3,11 +3,13 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Icons"
+        rel="stylesheet">
         <title>Google Homepage</title>
     </head>
     <body>
         <header>
-            <div id="navbar">
+            <nav>
                 <ul>
                     <li class="navbar-left"><a href="#">About</a></li>
                     <li class= "navbar-left"><a href="#">Store</a></li>
@@ -21,7 +23,19 @@
                     <li class="navbar-right"><a href="https://images.google.com">Images</a></li>
                     <li class="navbar-right"><a href="https://mail.google.com">Gmail</a></li>
                 </ul>
-            </div>
+            </nav>
         </header>
+        <main>
+            <img src="foogle-logo.png" id="foogle-logo">
+            <form>
+                <div id="searchbar">
+                    <span class="material-icons">search</span>
+                    <input type="text" id="search" autocomplete="off">
+                    <img id="mic-logo" src="mic-logo.png">
+                </div>
+                <button type="button">Google Search</button>
+                <button type="button">I'm Feeling Lucky</button>
+            </form>
+        </main>
     </body>
 </html>
