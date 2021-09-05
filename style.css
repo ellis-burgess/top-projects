@@ -101,35 +101,50 @@ main {
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
-    padding-top: 100px;
+    padding-top: 160px;
+}
+
+form {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
 }
 
 #foogle-logo {
-    height: 92px;
-    padding: 20px;
+    height: 120px;
+    padding: 10px;
 }
 
 #searchbar {
-    border: 1px lightgrey solid;
+    border: 1px #dfe1e5 solid;
     border-radius: 50px;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     justify-content: center;
-    padding: 10px;
+    padding: 12px;
     margin: 20px;
-    width: 45vw;
-    min-width: 550px;
+    width: 80vw;
+    max-width: 550px;
+}
+
+#searchbar:hover {
+    border: 1px white solid;
+    box-shadow: 0px 0px 8px 1px lightgrey;
 }
 
 .material-icons {
-    font-size: 18px !important;
-    color: grey;
+    font-size: 20px !important;
+    color: #9ba0a5;
     flex: none;
+    user-select: none;
+    cursor: default;
 }
 
 #mic-logo {
-    max-height: 18px;
+    max-height: 22px;
+    padding-right: 10px;
     flex: none;
 }
 
@@ -143,4 +158,20 @@ main {
 
 input:focus {
     outline: none;
+}
+
+button {
+    background-color: #f8f9fa;
+    padding: 10px 14px;
+    margin: 5px;
+    border: #f8f9fa 1px solid;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #f8f9fa;
+    border: #dbdce0 1px solid;
+    box-shadow: 1px 2px 2px 0px #e6e6e6;
+    cursor: pointer;
 }
