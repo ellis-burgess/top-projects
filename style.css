@@ -46,6 +46,8 @@ li a:hover {
 
 .navbar-right {
     float: right;
+    font-size: 13px;
+    padding-left: 12px;
 }
 
 #profile-img {
@@ -57,13 +59,13 @@ li a:hover {
 }
 
 #icon-apps {
-    max-height: 20px;
+    max-height: 15px;
     margin: 10px;
 }
 
 .background-hover {
     background-color: #ffffff;
-    height: 40px;
+    height: 35px;
     position: relative;
     top: -10px;
     border-radius: 50%;
@@ -174,4 +176,84 @@ button:hover {
     border: #dbdce0 1px solid;
     box-shadow: 1px 2px 2px 0px #e6e6e6;
     cursor: pointer;
+}
+
+footer {
+    background: linear-gradient(180deg, #ffffff 0%, #ffffff 40%, #f3f3f2 40%);
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+}
+
+#carbon-neutral {
+    width: 200px;
+    margin: auto;
+    position: relative;
+    bottom: -35px;
+    padding-top: 20px;
+}
+
+footer > a {
+    text-decoration: none;
+    color: black;
+}
+
+footer > a:hover {
+    text-decoration: underline;
+}
+
+#carbon-neutral > img {
+    height: 14px;
+}
+
+#footer-bar {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0px 0px 0px;
+}
+
+#footer-bar-left {
+    padding-bottom: 20px;
+}
+
+#footer-bar-left > a {
+    text-decoration: inherit;
+    color: inherit;
+    padding-left: 24px;
+}
+
+#footer-bar-left > a:hover {
+    text-decoration: underline;
+}
+
+#footer-bar-right {
+    padding-bottom: 20px;
+}
+
+#footer-bar-right > a {
+    text-decoration: inherit;
+    color: inherit;
+    padding-right: 24px;
+}
+
+#footer-bar-right > a:hover {
+    text-decoration: underline;
+}
+
+@media all and (max-width: 1200px) {
+    footer {
+        background: #f3f3f2;
+    }
+    
+    #carbon-neutral {
+        bottom: 0px;
+    }
+}
+
+@media all and (max-width: 600px) {
+    #footer-bar {
+        flex-flow: column nowrap;
+    }
 }
