@@ -31,12 +31,12 @@ li {
     padding-left: 24px;
 }
 
-li a {
+a {
     text-decoration: none;
     color: #000000;
 }
 
-li a:hover {
+a:hover {
     text-decoration: underline;
 }
 
@@ -195,7 +195,7 @@ footer {
 
 footer > a {
     text-decoration: none;
-    color: black;
+    color: #7f8286;
 }
 
 footer > a:hover {
@@ -219,13 +219,9 @@ footer > a:hover {
 }
 
 #footer-bar-left > a {
-    text-decoration: inherit;
-    color: inherit;
-    padding-left: 24px;
-}
 
-#footer-bar-left > a:hover {
-    text-decoration: underline;
+    color: #7f8286;
+    padding-left: 24px;
 }
 
 #footer-bar-right {
@@ -233,20 +229,16 @@ footer > a:hover {
 }
 
 #footer-bar-right > a {
-    text-decoration: inherit;
-    color: inherit;
-    padding-right: 24px;
-}
 
-#footer-bar-right > a:hover {
-    text-decoration: underline;
+    color: #7f8286;
+    padding-right: 24px;
 }
 
 @media all and (max-width: 1200px) {
     footer {
         background: #f3f3f2;
     }
-    
+
     #carbon-neutral {
         bottom: 0px;
     }
