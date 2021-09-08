@@ -65,7 +65,7 @@ a:hover {
 
 #settings-icon {
     margin: 5px;
-    color: #63666a;
+    color: #333333;
 }
 
 .background-hover {
@@ -131,12 +131,21 @@ a:hover {
 }
 
 #search-logo {
-    font-size: 24px !important;
+    font-size: 24px;
     color: #5383ec;
     flex: none;
     user-select: none;
     cursor: default;
     padding-left: 5px;
+}
+
+#clear-icon {
+    color: #63666a;
+    padding-right: 5px;
+    border-right: 1px lightgrey solid;
+    margin-right: 8px;
+    user-select: none;
+    cursor: pointer;
 }
 
 #mic-logo {
@@ -155,4 +164,46 @@ a:hover {
 
 input:focus {
     outline: none;
+}
+
+#search-color-icon {
+    height: 14px;
+    padding-right: 5px;
+}
+
+#toolbar {
+    position: absolute;
+    top: 100px;
+    left: 150px;
+}
+
+#toolbar > ul > li > a {
+    color: #5d5f63;
+    font-size: 15px;
+}
+
+.toolbar-icon {
+    font-size: 15px !important;
+    position: relative;
+    padding-right: 5px;
+    top: 2px;
+}
+
+#current-nav {
+    color: #5383ec !important;
+    padding-bottom: 10px;
+    border-bottom: #5383ec solid 3px;
+}
+
+#divide-line {
+    position: absolute;
+    width: 100vw;
+    top: 30px;
+    z-index: -1;
+    left: -150px;
+    height: 0.5px;
+    background-color: #ebebeb;
+}
+#tools {
+    margin-left: 100px;
 }
