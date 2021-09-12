@@ -1,1 +1,3 @@
 # odin-recipes
+
+This is an exercise in HTML for the-odin-project. More info to come...
