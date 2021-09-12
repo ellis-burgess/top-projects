@@ -1,48 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="search-style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined"
-        rel="stylesheet">
-        <title>foogle search - Google Search</title>
-    </head>
 
-    <body>
-        <header>
-            <nav>
-                <ul>
-                    <li class="navbar-right" id="profile-link"><a href="#"><img src="profile-photo.jpeg" id="profile-img"></a></li>
-                    <div id="profile-hover">
-                        <p id="created-by">Created by</p>
-                        <p>Elin Burgess</p>
-                        <p>example@email.com</p>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="search-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+    <title>foogle search - Google Search</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="navbar-right" id="profile-link"><a href="#"><img src="profile-photo.jpeg"
+                            id="profile-img"></a></li>
+                <div id="profile-hover">
+                    <p id="created-by">Created by</p>
+                    <p>Elin Burgess</p>
+                    <p>example@email.com</p>
+                </div>
+                <li class="navbar-right"><a href="#">
+                        <div class="background-hover"><img src="apps-icon.png" class="icon-apps"></div>
+                    </a></li>
+                <li class="navbar-right"><a href="#">
+                        <div class="background-hover"><span class="material-icons-outlined" class="icon-apps"
+                                id="settings-icon">settings</span></div>
+                    </a></li>
+            </ul>
+        </nav>
+        <a href="index.html"><img src="foogle-logo.png" id="foogle-logo"></a>
+        <div id="searchbar">
+            <input type="text" id="search" autocomplete="off" value="foogle search">
+            <span class="material-icons-outlined" id="clear-icon">close</span>
+            <img id="mic-logo" src="mic-logo.png">
+            <span class="material-icons" id="search-logo">search</span>
+        </div>
+
+        <div id="toolbar">
+            <ul>
+                <li><a href="#" class="toolbar-link" id="current-nav"><img src="search-color-icon.png"
+                            id="search-color-icon">All</a></li>
+                <li><a href="#" class="toolbar-link"><span
+                            class="material-icons-outlined toolbar-icon">smart_display</span>Videos</a></li>
+                <li><a href="#" class="toolbar-link"><span
+                            class="material-icons-outlined toolbar-icon">article</span>News</a></li>
+                <li><a href="#" class="toolbar-link"><span
+                            class="material-icons-outlined toolbar-icon">image</span>Images</a></li>
+                <li><a href="#" class="toolbar-link"><span
+                            class="material-icons-outlined toolbar-icon">location_on</span>Maps</a></li>
+                <li><a href="#" class="toolbar-link"><span
+                            class="material-icons-outlined toolbar-icon">more_vert</span>More</a></li>
+                <li id=tools><a href="#">Tools</a></li>
+            </ul>
+            <div id="divide-line"></div>
+        </div>
+    </header>
+
+    <main>
+        <div id="results-amount">About 356,000 results (0.2 seconds)</div>
+        <div id="search results">
+            <div class="one-result">
+                <a href="#">
+                    <div class="search-result-link">
+                        <p>
+                            https://example.com
+                            <span class="material-icons-outlined toolbar-icon result-more">more_vert</span>
+                        </p>
+                        <h2>Search Result</h2>
                     </div>
-                    <li class="navbar-right"><a href="#"><div class="background-hover"><img src="apps-icon.png" class="icon-apps"></div></a></li>
-                    <li class="navbar-right"><a href="#"><div class="background-hover"><span class="material-icons-outlined" class="icon-apps" id="settings-icon">settings</span></div></a></li>
-                </ul>
-            </nav>
-            <a href="index.html"><img src="foogle-logo.png" id="foogle-logo"></a>
-            <div id="searchbar">
-                <input type="text" id="search" autocomplete="off" value="foogle search">
-                <span class="material-icons-outlined" id="clear-icon">close</span>
-                <img id="mic-logo" src="mic-logo.png">
-                <span class="material-icons" id="search-logo">search</span>
+                </a>
+                <p>This is an example of a search result. It isn't real, because foogle isn't actually Google. Lorem
+                    ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua.</p>
             </div>
 
-            <div id="toolbar">
-                <ul>
-                    <li><a href="#" class="toolbar-link" id="current-nav"><img src="search-color-icon.png" id="search-color-icon">All</a></li>
-                    <li><a href="#" class="toolbar-link"><span class="material-icons-outlined toolbar-icon">smart_display</span>Videos</a></li>
-                    <li><a href="#" class="toolbar-link"><span class="material-icons-outlined toolbar-icon">article</span>News</a></li>
-                    <li><a href="#" class="toolbar-link"><span class="material-icons-outlined toolbar-icon">image</span>Images</a></li>
-                    <li><a href="#" class="toolbar-link"><span class="material-icons-outlined toolbar-icon">location_on</span>Maps</a></li>
-                    <li><a href="#" class="toolbar-link"><span class="material-icons-outlined toolbar-icon">more_vert</span>More</a></li>
-                    <li id=tools><a href="#">Tools</a></li>
-                </ul>
-                <div id="divide-line"></div>
+            <div class="one-result">
+                <a href="#">
+                    <div class="search-result-link">
+                        <p>
+                            https://example.com
+                            <span class="material-icons-outlined toolbar-icon result-more">more_vert</span>
+                        </p>
+                        <h2>Search Result</h2>
+                    </div>
+                </a>
+                <p>This is an example of a search result. It isn't real, because foogle isn't actually Google. Lorem
+                    ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua.</p>
             </div>
-        </header>
-    </body>
+
+            <div class="one-result">
+                <a href="#">
+                    <div class="search-result-link">
+                        <p>
+                            https://example.com
+                            <span class="material-icons-outlined toolbar-icon result-more">more_vert</span>
+                        </p>
+                        <h2>Search Result</h2>
+                    </div>
+                </a>
+                <p>This is an example of a search result. It isn't real, because foogle isn't actually Google. Lorem
+                    ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua.</p>
+            </div>
+
+            <div class="one-result">
+                <a href="#">
+                    <div class="search-result-link">
+                        <p>
+                            https://example.com
+                            <span class="material-icons-outlined toolbar-icon result-more">more_vert</span>
+                        </p>
+                        <h2>Search Result</h2>
+                    </div>
+                </a>
+                <p>This is an example of a search result. It isn't real, because foogle isn't actually Google. Lorem
+                    ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua.</p>
+            </div>
+
+            <div class="one-result">
+                <a href="#">
+                    <div class="search-result-link">
+                        <p>
+                            https://example.com
+                            <span class="material-icons-outlined toolbar-icon result-more">more_vert</span>
+                        </p>
+                        <h2>Search Result</h2>
+                    </div>
+                </a>
+                <p>This is an example of a search result. It isn't real, because foogle isn't actually Google. Lorem
+                    ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua.</p>
+            </div>
+
+            <div class="one-result">
+                <a href="#">
+                    <div class="search-result-link">
+                        <p>
+                            https://example.com
+                            <span class="material-icons-outlined toolbar-icon result-more">more_vert</span>
+                        </p>
+                        <h2>Search Result</h2>
+                    </div>
+                </a>
+                <p>This is an example of a search result. It isn't real, because foogle isn't actually Google. Lorem
+                    ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua.</p>
+            </div>
+
+            <div class="one-result">
+                <a href="#">
+                    <div class="search-result-link">
+                        <p>
+                            https://example.com
+                            <span class="material-icons-outlined toolbar-icon result-more">more_vert</span>
+                        </p>
+                        <h2>Search Result</h2>
+                    </div>
+                </a>
+                <p>This is an example of a search result. It isn't real, because foogle isn't actually Google. Lorem
+                    ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua.</p>
+            </div>
+
+            <div class="one-result">
+                <a href="#">
+                    <div class="search-result-link">
+                        <p>
+                            https://example.com
+                            <span class="material-icons-outlined toolbar-icon result-more">more_vert</span>
+                        </p>
+                        <h2>Search Result</h2>
+                    </div>
+                </a>
+                <p>This is an example of a search result. It isn't real, because foogle isn't actually Google. Lorem
+                    ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua.</p>
+            </div>
+
+            <div class="one-result">
+                <a href="#">
+                    <div class="search-result-link">
+                        <p>
+                            https://example.com
+                            <span class="material-icons-outlined toolbar-icon result-more">more_vert</span>
+                        </p>
+                        <h2>Search Result</h2>
+                    </div>
+                </a>
+                <p>This is an example of a search result. It isn't real, because foogle isn't actually Google. Lorem
+                    ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua.</p>
+            </div>
+
+            <div class="one-result">
+                <a href="#">
+                    <div class="search-result-link">
+                        <p>
+                            https://example.com
+                            <span class="material-icons-outlined toolbar-icon result-more">more_vert</span>
+                        </p>
+                        <h2>Search Result</h2>
+                    </div>
+                </a>
+                <p>This is an example of a search result. It isn't real, because foogle isn't actually Google. Lorem
+                    ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua.</p>
+            </div>
+            <div id="divide-line2"></div>
+        </div>
+
+        <div>
+            <h3>
+                Related searches
+                <span class="material-icons-outlined toolbar-icon result-more" id="related-more">more_vert</span>
+            </h3>
+            <div id="related-searches">
+
+                <a href="#">
+                    <div class="each-related-search">
+                        <span class="material-icons-outlined toolbar-icon result-more">search</span>
+                        foogle search is cool
+                    </div>
+                </a>
+
+                <a href="#">
+                    <div class="each-related-search">
+                        <span class="material-icons-outlined toolbar-icon result-more">search</span>
+                        foogle search is neat
+                    </div>
+                </a>
+
+                <a href="#">
+                    <div class="each-related-search">
+                        <span class="material-icons-outlined toolbar-icon result-more">search</span>
+                        foogle search is fun
+                    </div>
+                </a>
+
+                <a href="#">
+                    <div class="each-related-search">
+                        <span class="material-icons-outlined toolbar-icon result-more">search</span>
+                        foogle search is inspiring
+                    </div>
+                </a>
+
+                <a href="#">
+                    <div class="each-related-search">
+                        <span class="material-icons-outlined toolbar-icon result-more">search</span>
+                        foogle search is groundbreaking
+                    </div>
+                </a>
+
+                <a href="#">
+                    <div class="each-related-search">
+                        <span class="material-icons-outlined toolbar-icon result-more">search</span>
+                        foogle search is unique
+                    </div>
+                </a>
+
+                <a href="#">
+                    <div class="each-related-search">
+                        <span class="material-icons-outlined toolbar-icon result-more">search</span>
+                        foogle search is definitely real
+                    </div>
+                </a>
+
+                <a href="#">
+                    <div class="each-related-search">
+                        <span class="material-icons-outlined toolbar-icon result-more">search</span>
+                        foogle search is a lie
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <ul id="footer-bar">
+            <a href="#"><li>Help</li></a>
+            <a href="#"><li>Send feedback</li></a>
+            <a href="#"><li>Privacy</li></a>
+            <a href="#"><li>Terms</li></a>
+        </ul>
+    </footer>
+</body>
+
 </html>

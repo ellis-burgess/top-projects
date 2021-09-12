@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Glory:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
 html {
     box-sizing: border-box;
-    font-family: arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 13.5px;
     overflow-x: scroll;
 }
@@ -16,7 +18,7 @@ html {
 
 nav {
     height: 65px;
-    position: fixed;
+    position: absolute;
     top: 25px;
     width: 100%;
 }
@@ -204,6 +206,116 @@ input:focus {
     height: 0.5px;
     background-color: #ebebeb;
 }
+
 #tools {
     margin-left: 100px;
+}
+
+main {
+    position: relative;
+    top: 150px;
+    left: 175px;
+    width: 600px;
+}
+
+#divide-line2 {
+    position: relative;
+    left: 0px;
+    height: 0.5px;
+    margin-bottom: 10px;
+    background-color: #ebebeb;
+}
+
+#results-amount {
+    color: #5d5f63;
+    padding-bottom: 20px;
+}
+
+.result-more {
+    padding-left: 10px;
+}
+
+.search-result-link {
+    height: 45px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    padding-bottom: 5px;
+}
+
+h2 {
+    font-weight: normal;
+    color: #180ea4;
+}
+
+.one-result > p {
+    color: #444444;
+}
+
+.one-result {
+    padding-bottom: 30px;
+}
+
+#related-searches {
+    display: flex;
+    flex-flow: row wrap;
+    width: 650px;
+    justify-content: space-between;
+    align-items: space-between;
+}
+
+.each-related-search {
+    color: #000000;
+    background-color: #f2f3f4;
+    padding: 15px;
+    margin: 5px 0px;
+    border-radius: 30px;
+    font-size: 15px;
+    width: 280px;
+}
+
+h3 {
+    font-weight: normal;
+    font-size: 20px;
+}
+
+#related-more{
+    color: #5d5f63;
+}
+
+#search-result-pages{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#footer-bar > li {
+    display: inline;
+}
+
+footer {
+    background: #f3f3f2;
+    position: absolute;
+    bottom: -1000px;
+    height: 50px;
+    width: 100vw;
+}
+
+#footer-bar {
+    height: 50px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 150px;
+}
+
+#footer-bar > a {
+    text-decoration: none;
+    color: #7f8286;
+}
+
+#footer-bar > a:hover {
+    color: #000000;
 }
