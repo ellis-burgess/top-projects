@@ -1,2 +1,2 @@
-I'm building a clone of the Google homepage as part of The Odin Project.
-This exercise will enable me to put to use the HTML and CSS skills that I have learned so far.
+This is a fake Google I made for The Odin Project. Unfortunately finished just a little too late to submit my result, but figured I might as well keep it here anyway!
+I learned a lot by making this "Foogle" (as I've taken to calling it). In reading about headers and footers, I found out that using unordered lists makes way more sense for nav bars than trying to use flex. I also gained a lot of experience in simply writing things in HTML and CSS. As I went along, I found myself getting more and more into a "flow," stopping to look things up or check that the code I was writing looked how I expected less and less often.
