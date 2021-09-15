@@ -1,9 +1,24 @@
 html {
     box-sizing: border-box;
+    font-size: 62.5%;
 }
 
 *, *:before, *:after {
     box-sizing: inherit;
+}
+
+header {
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+    linear-gradient(to bottom, transparent, #F5E0E3),
+    url(images/food-prep.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: #F5E0E3;
 }
 
 body {
@@ -13,22 +28,49 @@ body {
 h1 {
     text-align: center;
     font-family: Helvetica, sans-serif;
-    color: #4D2244
+    color: #4D2244;
+    font-size: 4rem;
+    background-color :#F5E0E3;
+    background: radial-gradient(#F5E0E3, transparent);
+    width: 50vw;
+    margin: auto;
+    border-radius: 30%;
 }
 
 h2 {
     font-family: Helvetica, sans-serif;
     color: #975F5E;
     text-decoration: underline;
-}
-
-li > a {
-    margin: 10px;
-    font-size: 20px;
+    font-size: 3rem;
+    text-align: center;
+    background-color: #F5E0E3;
+    width: 50vw;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 li {
-    list-style-type: none;
+    list-style: none;
+}
+
+#recipe-nav {
+    text-align: center;
+    height: 400px;
+    max-height: 30vh;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#recipe-nav > li {
+    list-style-position: inside;
+    margin-left: -40px;
+}
+
+
+li > a {
+    font-size: 2rem;
 }
 
 a {
@@ -38,7 +80,7 @@ a {
 
 a:hover {
     color: #F5E0E3;
-    background-color: #4D2244;
+    background-color: #975F5E;
 }
 
 img {
@@ -62,4 +104,8 @@ p, li {
 ol > li {
     list-style-type: decimal;
     padding: 10px 0;
+}
+
+p, li, a {
+    font-size: 1.6rem;
 }
