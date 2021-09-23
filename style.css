@@ -3,8 +3,46 @@ html {
     font-size: 62.5%;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
     box-sizing: inherit;
+}
+
+nav {
+    position: sticky;
+    margin: -10px -10px 0px -10px;
+    padding-top: 1px;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    background: #f3d8dc;
+    border-bottom: 1px solid #975F5E;
+}
+
+.nav-links {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 0px;
+    padding-left: 20px;
+    align-content: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.nav-links ul {
+    display: none;
+    position: absolute;
+    top: 32px;
+    left: 150px;
+    background: #F5E0E3;
+    box-shadow: #ecc5cb 2px 2px 5px;
+    padding: 0px;
+    padding-top: 10px;
+}
+
+.nav-links li:hover ul {
+    display: inline;
 }
 
 header {
@@ -12,12 +50,10 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    background:
-    linear-gradient(to bottom, transparent, #F5E0E3),
-    url(images/food-prep.jpeg);
+    background: linear-gradient(to bottom, transparent, #F5E0E3), url(images/food-prep.jpeg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 100% auto;
     background-color: #F5E0E3;
 }
 
@@ -30,7 +66,7 @@ h1 {
     font-family: Helvetica, sans-serif;
     color: #4D2244;
     font-size: 4rem;
-    background-color :#F5E0E3;
+    background-color: #F5E0E3;
     background: radial-gradient(#F5E0E3, transparent);
     width: 50vw;
     margin: auto;
@@ -63,13 +99,12 @@ li {
     justify-content: space-between;
 }
 
-#recipe-nav > li {
+#recipe-nav>li {
     list-style-position: inside;
     margin-left: -40px;
 }
 
-
-li > a {
+li>a {
     font-size: 2rem;
 }
 
@@ -91,7 +126,8 @@ img {
     margin: 0 auto;
 }
 
-p, li {
+p,
+li {
     color: #6d583d;
 }
 
@@ -101,11 +137,13 @@ p, li {
     margin: 0 auto;
 }
 
-ol > li {
+ol>li {
     list-style-type: decimal;
     padding: 10px 0;
 }
 
-p, li, a {
+p,
+li,
+a {
     font-size: 1.6rem;
 }
