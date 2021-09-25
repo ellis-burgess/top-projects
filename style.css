@@ -1,10 +1,13 @@
-/* COLOURS:
+/* Colour palette (for reference):
     darkest: #5A444A
     contrast: #C6808C
     low-contrast text: #EDEBEC
     high-contrast text: #F7F7FA
     generic background: #FBFBFB
 */
+
+
+/*Global*/
 
 body {
     padding: 0;
@@ -20,6 +23,9 @@ main {
     padding: 0;
     margin: 0;
 }
+
+
+/*Navbar*/
 
 header {
     position: sticky;
@@ -62,6 +68,9 @@ a:hover {
     text-decoration: underline;
 }
 
+
+/*Hero section*/
+
 .hero {
     background-color: #5A444A;
     display: flex;
@@ -99,8 +108,10 @@ button:hover {
     margin: 10px;
     color: #5A444A;
     text-align: center;
-    padding: auto;
 }
+
+
+/*Information section*/
 
 #information {
     padding-top: 50px;
@@ -136,6 +147,9 @@ button:hover {
     gap: 48px;
 }
 
+
+/*Testimonial section*/
+
 .testimonial {
     background-color: #EDEBEC;
     color: #5A444A;
@@ -153,6 +167,9 @@ blockquote {
     float: right;
     font-weight: bold;
 }
+
+
+/*Registration section*/
 
 #register {
     background-color: #C6808C;
@@ -174,6 +191,9 @@ blockquote {
 .btn-register {
     border: 1px white solid;
 }
+
+
+/*Footer*/
 
 footer {
     background-color: #5A444A;
