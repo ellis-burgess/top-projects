@@ -1,8 +1,17 @@
+/* COLOURS:
+    darkest: #5A444A
+    contrast: #C6808C
+    low-contrast text: #EDEBEC
+    high-contrast text: #F7F7FA
+    generic background: #FBFBFB
+*/
+
 body {
     padding: 0;
     margin: 0;
     font-family: sans-serif;
-    color: #F9FAF8;
+    color: #F7F7FA;
+    background: #FBFBFB;
 }
 
 main {
@@ -20,7 +29,7 @@ header {
     justify-content: space-between;
     padding: 5px 48px;
     margin: 0px;
-    background-color: #1F2937;
+    background-color: #5A444A;
 }
 
 .header-logo {
@@ -40,7 +49,7 @@ li {
 
 h5,
 a {
-    color: #E5E7EB;
+    color: #EDEBEC;
     text-decoration: none;
     font-size: 18px;
     font-weight: normal;
@@ -51,7 +60,7 @@ a:hover {
 }
 
 .hero {
-    background-color: #1F2937;
+    background-color: #5A444A;
     display: flex;
     flex-flow: row nowrap;
     gap: 24px;
@@ -66,8 +75,8 @@ h1 {
 }
 
 button {
-    background-color: #3882F6;
-    color: white;
+    background-color: #C6808C;
+    color: #F7F7FA;
     border: none;
     padding: 5px 15px;
     border-radius: 5px;
@@ -75,18 +84,17 @@ button {
 }
 
 .hero-img {
-    background-color: #E5E7EB;
-    height: 200px;
+    height: auto;
     width: 40vw;
     min-width: 400px;
     margin: 10px;
-    color: black;
+    color: #5A444A;
     text-align: center;
     padding: auto;
 }
 
 .information {
-    color: black;
+    color: #5A444A;
     text-align: center;
     display: flex;
     flex-flow: column nowrap;
@@ -104,7 +112,7 @@ button {
 .info-img {
     width: 150px;
     height: 150px;
-    border: #3882F6 solid 3px;
+    border: #C6808C solid 3px;
     border-radius: 15%;
 }
 
@@ -119,8 +127,8 @@ button {
 }
 
 .testimonial {
-    background-color: #E5E7EB;
-    color: #1F2937;
+    background-color: #EDEBEC;
+    color: #5A444A;
     padding: 84px 20vw;
 }
 
@@ -137,7 +145,7 @@ blockquote {
 }
 
 .register {
-    background-color: #3882F6;
+    background-color: #C6808C;
     margin: 96px;
     padding: 48px;
     display: flex;
@@ -158,7 +166,7 @@ blockquote {
 }
 
 footer {
-    background-color: #1F2937;
+    background-color: #5A444A;
     width: 100vw;
     text-align: center;
     height: 96px;
