@@ -84,6 +84,12 @@ button {
     padding: 5px 15px;
     border-radius: 5px;
     font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #F7F7FA;
+    color: #C6808C;
 }
 
 .hero-img {
@@ -97,6 +103,8 @@ button {
 }
 
 #information {
+    padding-top: 50px;
+    margin-top: -50px;
     color: #5A444A;
     text-align: center;
     display: flex;
