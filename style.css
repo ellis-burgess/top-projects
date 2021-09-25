@@ -22,6 +22,9 @@ main {
 }
 
 header {
+    position: sticky;
+    top: 0;
+    left: 0;
     display: block;
     display: flex;
     flex-flow: row nowrap;
@@ -93,7 +96,7 @@ button {
     padding: auto;
 }
 
-.information {
+#information {
     color: #5A444A;
     text-align: center;
     display: flex;
@@ -144,7 +147,7 @@ blockquote {
     font-weight: bold;
 }
 
-.register {
+#register {
     background-color: #C6808C;
     margin: 96px;
     padding: 48px;
@@ -155,8 +158,8 @@ blockquote {
     border-radius: 20px;
 }
 
-.register div h3,
-.register div p {
+#register div h3,
+#register div p {
     margin: 0;
     padding: 3px;
 }
