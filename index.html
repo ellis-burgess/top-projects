@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
         const rockPaperScissors = ['rock', 'paper', 'scissors'];
-        let computerSelection = computerPlay();
-        let playerSelection = playerPlay();
-        playRound(computerSelection, playerSelection);
+        playGame();
 
         function computerPlay() {
             return rockPaperScissors[(Math.floor(Math.random() * 3))];
@@ -28,18 +28,47 @@
             }
         }
 
-        function playRound(computerSelection, playerSelection) {
+        function playRound() {
+            let computerSelection = computerPlay();
+            let playerSelection = playerPlay();
             if (computerSelection == playerSelection) {
-                return alert(`You and the computer both played ${playerSelection}. It's a draw!`);
+                alert(`You and the computer both played ${playerSelection}. It's a draw!`);
+                return 'draw'
             }
             else if ((playerSelection == 'rock' && computerSelection == 'paper') ||
-                    (playerSelection == 'paper' && computerSelection == 'scissors') ||
-                    (playerSelection == 'scissors' && computerSelection == 'rock')) {
-                    return alert(`You played ${playerSelection}, and the computer played ${computerSelection}. Computer wins!`)
-                } else {
-                    return alert(`You played ${playerSelection}, and the computer played ${computerSelection}. You win!`)
-                }
+                (playerSelection == 'paper' && computerSelection == 'scissors') ||
+                (playerSelection == 'scissors' && computerSelection == 'rock')) {
+                alert(`You played ${playerSelection}, and the computer played ${computerSelection}. Computer wins!`)
+                return 'computer'
+            } else {
+                alert(`You played ${playerSelection}, and the computer played ${computerSelection}. You win!`)
+                return 'player'
             }
+        }
+
+        function playGame() {
+            let computerScore = 0;
+            let playerScore = 0;
+            while ((computerScore < 5) && (playerScore < 5)) {
+                let result = playRound()
+                if (result == 'computer') {
+                    computerScore++;
+                } else if (result == 'player') {
+                    playerScore++
+                }
+                alert(`Your current score is ${playerScore}, and the computer's current score is ${computerScore}.`);
+            }
+            if (computerScore == 5) {
+                alert('Computer wins!')
+            } else {
+                alert('You win!')
+            }
+            let playAgain = confirm('Again?');
+            if (playAgain == true) {
+                playGame();
+            }
+        }
     </script>
 </body>
+
 </html>
