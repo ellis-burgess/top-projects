@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const rockPaperScissors = ['rock', 'paper', 'scissors'];
+        let computerSelection = computerPlay();
+        let playerSelection = playerPlay();
+        playRound(computerSelection, playerSelection);
+
+        function computerPlay() {
+            return rockPaperScissors[(Math.floor(Math.random() * 3))];
+        }
+
+        function playerPlay() {
+            let playerChoice = prompt('Rock, paper, scissors?');
+            playerChoice = playerChoice.toLowerCase();
+            if (playerChoice == 'rock' || playerChoice == 'scissors' || playerChoice == 'paper') {
+                return playerChoice
+            } else {
+                alert('Invalid selection. Please try again.');
+                playerPlay();
+            }
+        }
+
+        function playRound(computerSelection, playerSelection) {
+            if (computerSelection == playerSelection) {
+                return alert(`You and the computer both played ${playerSelection}. It's a draw!`);
+            }
+            else if ((playerSelection == 'rock' && computerSelection == 'paper') ||
+                    (playerSelection == 'paper' && computerSelection == 'scissors') ||
+                    (playerSelection == 'scissors' && computerSelection == 'rock')) {
+                    return alert(`You played ${playerSelection}, and the computer played ${computerSelection}. Computer wins!`)
+                } else {
+                    return alert(`You played ${playerSelection}, and the computer played ${computerSelection}. You win!`)
+                }
+            }
+    </script>
+</body>
+</html>
