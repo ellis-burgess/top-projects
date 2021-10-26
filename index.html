@@ -13,24 +13,24 @@
         const rockPaperScissors = ['rock', 'paper', 'scissors'];
         playGame();
 
-        function computerPlay() {
+        function chooseComputer() {
             return rockPaperScissors[(Math.floor(Math.random() * 3))];
         }
 
-        function playerPlay() {
+        function choosePlayer() {
             let playerChoice = prompt('Rock, paper, scissors?');
             playerChoice = playerChoice.toLowerCase();
             if (playerChoice == 'rock' || playerChoice == 'scissors' || playerChoice == 'paper') {
                 return playerChoice
             } else {
                 alert('Invalid selection. Please try again.');
-                playerPlay();
+                choosePlayer();
             }
         }
 
         function playRound() {
-            let computerSelection = computerPlay();
-            let playerSelection = playerPlay();
+            let computerSelection = chooseComputer();
+            let playerSelection = choosePlayer();
             if (computerSelection == playerSelection) {
                 alert(`You and the computer both played ${playerSelection}. It's a draw!`);
                 return 'draw'
