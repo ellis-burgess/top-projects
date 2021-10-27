@@ -9,39 +9,48 @@
 </head>
 
 <body>
+    <button class="playerinput" id="rock">Rock</button>
+    <button class="playerinput" id="paper">Paper</button>
+    <button class="playerinput" id="scissors">Scissors</button>
+
+    <div id="results-div">
+        <p id="results"></p>
+        <p id="total-score"></p>
+    </div>
+
     <script>
         const rockPaperScissors = ['rock', 'paper', 'scissors'];
-        playGame();
+        const buttons = document.querySelectorAll('button');
+        const div = document.querySelector('#results-div');
+        const result = document.querySelector('#results');
+        const scoreTally = document.querySelector('#total-score');
+
+        buttons.forEach((button) => {
+            button.addEventListener('click', () => {
+                playerChoice = button.id;
+                playRound(playerChoice);
+            });
+        });
+
+        //playGame();
 
         function chooseComputer() {
             return rockPaperScissors[(Math.floor(Math.random() * 3))];
         }
 
-        function choosePlayer() {
-            let playerChoice = prompt('Rock, paper, scissors?');
-            playerChoice = playerChoice.toLowerCase();
-            if (playerChoice == 'rock' || playerChoice == 'scissors' || playerChoice == 'paper') {
-                return playerChoice
-            } else {
-                alert('Invalid selection. Please try again.');
-                choosePlayer();
-            }
-        }
-
-        function playRound() {
+        function playRound(playerSelection) {
             let computerSelection = chooseComputer();
-            let playerSelection = choosePlayer();
             if (computerSelection == playerSelection) {
-                alert(`You and the computer both played ${playerSelection}. It's a draw!`);
+                result.textContent = `You and the computer both played ${playerSelection}. It's a draw!`;                               
                 return 'draw'
             }
             else if ((playerSelection == 'rock' && computerSelection == 'paper') ||
                 (playerSelection == 'paper' && computerSelection == 'scissors') ||
                 (playerSelection == 'scissors' && computerSelection == 'rock')) {
-                alert(`You played ${playerSelection}, and the computer played ${computerSelection}. Computer wins!`)
+                result.textContent = `You played ${playerSelection}, and the computer played ${computerSelection}. Computer wins!`;
                 return 'computer'
             } else {
-                alert(`You played ${playerSelection}, and the computer played ${computerSelection}. You win!`)
+                result.textContent = `You played ${playerSelection}, and the computer played ${computerSelection}. You win!`;
                 return 'player'
             }
         }
@@ -56,7 +65,7 @@
                 } else if (result == 'player') {
                     playerScore++
                 }
-                alert(`Your current score is ${playerScore}, and the computer's current score is ${computerScore}.`);
+                scoreTally.textContent = `Your current score is ${playerScore}, and the computer's current score is ${computerScore}.`;
             }
             if (computerScore == 5) {
                 alert('Computer wins!')
