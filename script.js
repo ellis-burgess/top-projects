@@ -1,11 +1,14 @@
 const rockPaperScissors = ['rock', 'paper', 'scissors'];
-const buttons = document.querySelectorAll('button');
+const startButton = document.querySelector('.start');
+const buttons = document.querySelectorAll('.playerinput');
 const div = document.querySelector('#results-div');
 const result = document.querySelector('#results');
 const scoreTally = document.querySelector('#total-score');
 let currentOutcome;
 
-playGame();
+result.textContent = `Press New Game to begin.`;
+
+startButton.addEventListener('click', playGame);
 
 function chooseComputer() {
     return rockPaperScissors[(Math.floor(Math.random() * 3))];
@@ -32,6 +35,8 @@ function playGame() {
 
     let computerScore = 0;
     let playerScore = 0;
+    result.textContent = '';
+    scoreTally.textContent = `Select rock, paper, or scissors...`;
 
     buttons.forEach((button) => {
         button.addEventListener('click', () => {
@@ -44,15 +49,18 @@ function playGame() {
                 } else if (currentOutcome == 'player') {
                     playerScore++;
                 }
-                scoreTally.textContent = `Your current score is ${playerScore}, and the computer's current score is ${computerScore}.`;        
             }
 
+            scoreTally.textContent = `Your score is ${playerScore}, and the computer's score is ${computerScore}.`;
+
             if (computerScore == 5) {
-                alert('Computer wins!');
-                return;
+                result.textContent = 'Computer wins!'
             } else if (playerScore == 5) {
-                alert('You win!');
-                return;
+                result.textContent = `You win!`
+            }
+
+            if ((computerScore == 5) || (playerScore == 5)) {
+                scoreTally.textContent += ` Click New Game to play again.`;
             }
         });
     });
