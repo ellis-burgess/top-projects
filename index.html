@@ -6,14 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js" defer></script>
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Rock, Paper, Scissors</title>
 </head>
 
 <body>
-    <button class="start">New Game</button>
-    <button class="playerinput" id="rock">Rock</button>
-    <button class="playerinput" id="paper">Paper</button>
-    <button class="playerinput" id="scissors">Scissors</button>
+    <h1>Rock, Paper, Scissors</h1>
+    <div id="ui-buttons">
+        <div id=start-button">
+            <button class="start">New Game</button>
+        </div>
+        <div id="player-buttons">
+            <button class="playerinput" id="rock">Rock</button>
+            <button class="playerinput" id="paper">Paper</button>
+            <button class="playerinput" id="scissors">Scissors</button>
+        </div>
+    </div>
 
     <div id="results-div">
         <p id="results"></p>
