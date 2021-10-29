@@ -1,6 +1,7 @@
 const rockPaperScissors = ['rock', 'paper', 'scissors'];
 const startButton = document.querySelector('.start');
 const playerInputButtons = document.querySelectorAll('.playerinput');
+const computerButtons = document.querySelectorAll('.computerchoice')
 const div = document.querySelector('#results-div');
 const result = document.querySelector('#results');
 const scoreTally = document.querySelector('#total-score');
@@ -10,28 +11,55 @@ playGame();
 
 startButton.addEventListener('click', playGame);
 
+function resetButtonsColor() {
+    computerButtons.forEach((button) => {
+        button.style.cssText = 'color: black;';
+    })
+
+    playerInputButtons.forEach((button) => {
+        button.style.cssText = 'color: black;';
+    })
+    return;
+}
+
 function chooseComputer() {
-    return rockPaperScissors[(Math.floor(Math.random() * 3))];
+    let computerSelection = rockPaperScissors[(Math.floor(Math.random() * 3))];
+    let computerButton = `computer-${computerSelection}`;
+    console.log(computerButton);
+    return [computerSelection, computerButton];
 }
 
 function playRound(playerSelection) {
     let computerSelection = chooseComputer();
-    if (computerSelection == playerSelection) {
+    let computerButton = document.getElementById(computerSelection[1]);
+    let playerButton = document.getElementById(playerSelection);
+    let outcome;
+
+    resetButtonsColor();
+
+    computerButton.style.cssText = 'color: red;';
+    playerButton.style.cssText = 'color: red;';
+
+    if (computerSelection[0] == playerSelection) {
         result.textContent = `You and the computer both played ${playerSelection}. It's a draw!`;
-        return 'draw'
+        outcome = 'draw'
     }
-    else if ((playerSelection == 'rock' && computerSelection == 'paper') ||
-        (playerSelection == 'paper' && computerSelection == 'scissors') ||
-        (playerSelection == 'scissors' && computerSelection == 'rock')) {
-        result.textContent = `You played ${playerSelection}, and the computer played ${computerSelection}. Computer wins!`;
-        return 'computer'
+    else if ((playerSelection == 'rock' && computerSelection[0] == 'paper') ||
+        (playerSelection == 'paper' && computerSelection[0] == 'scissors') ||
+        (playerSelection == 'scissors' && computerSelection[0] == 'rock')) {
+        result.textContent = `You played ${playerSelection}, and the computer played ${computerSelection[0]}. Computer wins!`;
+        outcome = 'computer'
     } else {
-        result.textContent = `You played ${playerSelection}, and the computer played ${computerSelection}. You win!`;
-        return 'player'
+        result.textContent = `You played ${playerSelection}, and the computer played ${computerSelection[0]}. You win!`;
+        outcome = 'player'
     }
+
+    return outcome;
 }
 
 function playGame() {
+
+    resetButtonsColor();
 
     let computerScore = 0;
     let playerScore = 0;

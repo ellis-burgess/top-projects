@@ -5,10 +5,32 @@ h1 {
 
 #ui-buttons {
     background-color: lightblue;
-    min-height: 80px;
+    min-height: 100px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+#player-buttons, #computer-buttons {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0px;
+}
+
+.button-set {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
+}
+
+@media screen and (max-width: 455px) {
+    #ui-buttons {
+        flex-flow: column;
+    }
 }
