@@ -1,12 +1,12 @@
 const rockPaperScissors = ['rock', 'paper', 'scissors'];
 const startButton = document.querySelector('.start');
-const buttons = document.querySelectorAll('.playerinput');
+const playerInputButtons = document.querySelectorAll('.playerinput');
 const div = document.querySelector('#results-div');
 const result = document.querySelector('#results');
 const scoreTally = document.querySelector('#total-score');
 let currentOutcome;
 
-result.textContent = `Press New Game to begin.`;
+playGame();
 
 startButton.addEventListener('click', playGame);
 
@@ -35,10 +35,11 @@ function playGame() {
 
     let computerScore = 0;
     let playerScore = 0;
+    startButton.style.cssText = 'display: none;';
     result.textContent = '';
     scoreTally.textContent = `Select rock, paper, or scissors...`;
 
-    buttons.forEach((button) => {
+    playerInputButtons.forEach((button) => {
         button.addEventListener('click', () => {
             let playerChoice = button.id;
             currentOutcome = playRound(playerChoice);
@@ -61,6 +62,9 @@ function playGame() {
 
             if ((computerScore == 5) || (playerScore == 5)) {
                 scoreTally.textContent += ` Click New Game to play again.`;
+                startButton.style.cssText = 'display: block;';
+            } else {
+                startButton.style.cssText = 'display: none;';
             }
         });
     });
