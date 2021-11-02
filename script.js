@@ -1,99 +1,95 @@
 const rockPaperScissors = ['rock', 'paper', 'scissors'];
 const startButton = document.querySelector('.start');
-const playerInputButtons = document.querySelectorAll('.playerinput');
-const computerButtons = document.querySelectorAll('.computerchoice')
-const div = document.querySelector('#results-div');
+const playerButtons = document.querySelectorAll('.playerinput');
+const computerButtons = document.querySelectorAll('.computerchoice');
 const result = document.querySelector('#results');
 const scoreTally = document.querySelector('#total-score');
+
 let currentOutcome;
+let computerScore;
+let playerScore;
 
-playGame();
+startNewGame();
 
-startButton.addEventListener('click', playGame);
+playerButtons.forEach(function (button) {
+    button.addEventListener('click', playRound);
+});
 
-function resetButtonsColor() {
-    computerButtons.forEach((button) => {
-        button.style.cssText = 'color: black;';
-    })
+startButton.addEventListener('click', startNewGame);
 
-    playerInputButtons.forEach((button) => {
-        button.style.cssText = 'color: black;';
-    })
-    return;
-}
+function playRound(event) {
+    resetButtonsDisplay();
 
-function chooseComputer() {
+    let playerSelection = this.id;
+    let playerButton = document.getElementById(this.id);
     let computerSelection = rockPaperScissors[(Math.floor(Math.random() * 3))];
-    let computerButton = `computer-${computerSelection}`;
-    console.log(computerButton);
-    return [computerSelection, computerButton];
-}
+    let computerButton = document.getElementById(`computer-${computerSelection}`);
 
-function playRound(playerSelection) {
-    let computerSelection = chooseComputer();
-    let computerButton = document.getElementById(computerSelection[1]);
-    let playerButton = document.getElementById(playerSelection);
-    let outcome;
+    computerButton.style.cssText = 'font-weight: bold;';
+    playerButton.style.cssText = 'font-weight: bold;';
 
-    resetButtonsColor();
-
-    computerButton.style.cssText = 'color: red;';
-    playerButton.style.cssText = 'color: red;';
-
-    if (computerSelection[0] == playerSelection) {
+    if (computerSelection == playerSelection) {
         result.textContent = `You and the computer both played ${playerSelection}. It's a draw!`;
         outcome = 'draw'
     }
-    else if ((playerSelection == 'rock' && computerSelection[0] == 'paper') ||
-        (playerSelection == 'paper' && computerSelection[0] == 'scissors') ||
-        (playerSelection == 'scissors' && computerSelection[0] == 'rock')) {
-        result.textContent = `You played ${playerSelection}, and the computer played ${computerSelection[0]}. Computer wins!`;
+    else if ((playerSelection == 'rock' && computerSelection == 'paper') ||
+        (playerSelection == 'paper' && computerSelection == 'scissors') ||
+        (playerSelection == 'scissors' && computerSelection == 'rock')) {
+        result.textContent = `You played ${playerSelection}, and the computer played ${computerSelection}. Computer wins!`;
         outcome = 'computer'
     } else {
-        result.textContent = `You played ${playerSelection}, and the computer played ${computerSelection[0]}. You win!`;
+        result.textContent = `You played ${playerSelection}, and the computer played ${computerSelection}. You win!`;
         outcome = 'player'
     }
 
-    return outcome;
+    currentOutcome = outcome;
+    if (currentOutcome == 'computer') {
+        computerScore++;
+    } else if (currentOutcome == 'player') {
+        playerScore++;
+    }
+
+    playGame();
+
+    return;
 }
 
 function playGame() {
-
-    resetButtonsColor();
-
-    let computerScore = 0;
-    let playerScore = 0;
-    startButton.style.cssText = 'display: none;';
-    result.textContent = '';
-    scoreTally.textContent = `Select rock, paper, or scissors...`;
-
-    playerInputButtons.forEach((button) => {
-        button.addEventListener('click', () => {
-            let playerChoice = button.id;
-            currentOutcome = playRound(playerChoice);
-    
-            if ((computerScore < 5) && (playerScore < 5)) {
-                if (currentOutcome == 'computer') {
-                    computerScore++;
-                } else if (currentOutcome == 'player') {
-                    playerScore++;
-                }
-            }
-
-            scoreTally.textContent = `Your score is ${playerScore}, and the computer's score is ${computerScore}.`;
-
-            if (computerScore == 5) {
-                result.textContent = 'Computer wins!'
-            } else if (playerScore == 5) {
-                result.textContent = `You win!`
-            }
-
-            if ((computerScore == 5) || (playerScore == 5)) {
-                scoreTally.textContent += ` Click New Game to play again.`;
-                startButton.style.cssText = 'display: block;';
-            } else {
-                startButton.style.cssText = 'display: none;';
-            }
+    scoreTally.textContent = `The computer's score is ${computerScore} and the player's score is ${playerScore}.`;
+    if ((playerScore == 5) || (computerScore == 5)) {
+        if (playerScore > computerScore) {
+            scoreTally.textContent += ` You win!`
+        } else {
+            scoreTally.textContent += ` You lose!`
+        }
+        startButton.style.cssText = 'display: block;';
+        playerButtons.forEach(function (button) {
+            button.removeEventListener('click', playRound);
         });
+    }
+}
+
+function startNewGame() {
+    startButton.style.cssText = 'display: none;';
+    playerButtons.forEach(function (button) {
+        button.addEventListener('click', playRound);
     });
+
+    resetButtonsDisplay();
+
+    computerScore = 0;
+    playerScore = 0;
+
+    scoreTally.textContent = `The computer's score is ${computerScore} and the player's score is ${playerScore}.`;
+}
+
+function resetButtonsDisplay() {
+    computerButtons.forEach((button) => {
+        button.style.cssText = 'font-weight: normal;';
+    })
+
+    playerButtons.forEach((button) => {
+        button.style.cssText = 'font-weight: normal;';
+    })
+    return;
 }
