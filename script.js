@@ -4,6 +4,9 @@ const playerButtons = document.querySelectorAll('.playerinput');
 const computerButtons = document.querySelectorAll('.computerchoice');
 const result = document.querySelector('#results');
 const scoreTally = document.querySelector('#total-score');
+const playerScoreDisplay = document.getElementById('player-score');
+const computerScoreDisplay = document.getElementById('computer-score');
+const scoreDisplay = document.getElementById('score');
 
 let currentOutcome;
 let computerScore;
@@ -49,13 +52,18 @@ function playRound(event) {
         playerScore++;
     }
 
+    scoreDisplay.style.cssText = 'display: flex;';
+
+    playerScoreDisplay.textContent = playerScore;
+    computerScoreDisplay.textContent = computerScore;
+
     playGame();
 
     return;
 }
 
 function playGame() {
-    scoreTally.textContent = `The computer's score is ${computerScore} and the player's score is ${playerScore}.`;
+    scoreTally.textContent = `Your score is ${playerScore} and the computer's score is ${computerScore}.`;
     if ((playerScore == 5) || (computerScore == 5)) {
         if (playerScore > computerScore) {
             scoreTally.textContent += ` You win!`
@@ -77,10 +85,16 @@ function startNewGame() {
 
     resetButtonsDisplay();
 
+    scoreDisplay.style.cssText = 'display: none;';
+
     computerScore = 0;
     playerScore = 0;
 
-    scoreTally.textContent = `The computer's score is ${computerScore} and the player's score is ${playerScore}.`;
+    playerScoreDisplay.textContent = '';
+    computerScoreDisplay.textContent = '';
+
+    result.textContent = '';
+    scoreTally.textContent = 'Play rock, paper, or scissors to begin...';
 }
 
 function resetButtonsDisplay() {
