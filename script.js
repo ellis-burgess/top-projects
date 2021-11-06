@@ -28,20 +28,20 @@ function playRound(event) {
     let computerSelection = rockPaperScissors[(Math.floor(Math.random() * 3))];
     let computerButton = document.getElementById(`computer-${computerSelection}`);
 
-    computerButton.style.cssText = 'font-weight: bold;';
-    playerButton.style.cssText = 'font-weight: bold;';
+    computerButton.style.cssText = 'background: green;';
+    playerButton.style.cssText = 'background: green;';
 
     if (computerSelection == playerSelection) {
-        result.textContent = `You and the computer both played ${playerSelection}. It's a draw!`;
+        result.textContent = `It's a draw! Try again...`;
         outcome = 'draw'
     }
     else if ((playerSelection == 'rock' && computerSelection == 'paper') ||
         (playerSelection == 'paper' && computerSelection == 'scissors') ||
         (playerSelection == 'scissors' && computerSelection == 'rock')) {
-        result.textContent = `You played ${playerSelection}, and the computer played ${computerSelection}. Computer wins!`;
+        result.textContent = `The computer wins this round...`;
         outcome = 'computer'
     } else {
-        result.textContent = `You played ${playerSelection}, and the computer played ${computerSelection}. You win!`;
+        result.textContent = `You win this round!`;
         outcome = 'player'
     }
 
@@ -99,11 +99,11 @@ function startNewGame() {
 
 function resetButtonsDisplay() {
     computerButtons.forEach((button) => {
-        button.style.cssText = 'font-weight: normal;';
+        button.style.cssText = 'background: white;';
     })
 
     playerButtons.forEach((button) => {
-        button.style.cssText = 'font-weight: normal;';
+        button.style.cssText = 'background: white;';
     })
     return;
 }
