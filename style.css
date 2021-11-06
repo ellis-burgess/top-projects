@@ -1,3 +1,12 @@
+/*
+COLOUR PALETTE
+dark blue: 3993dd
+light blue: 62aae4
+black: 3a3335
+light pink: E9C4E1
+dark pink: dea6d2
+*/
+
 html {
     box-sizing: border-box;
   }
@@ -5,6 +14,7 @@ html {
   *, *:before, *:after {
     box-sizing: inherit;
     margin: 0;
+    color: #3a3335;
   }
 
 h1 {
@@ -14,6 +24,11 @@ h1 {
 
 h3 {
     text-align: center;
+    color: #3a3335;
+}
+
+p {
+    font-size: 18px;
 }
 
 #body {
@@ -23,7 +38,7 @@ h3 {
 }
 
 #title-section {
-    background: red;
+    background: #3993dd;
     flex: 0 1 auto;
     display: block;
     height: 75px;
@@ -35,12 +50,12 @@ h3 {
 
 #gameplay-section {
     flex: 1 1 auto;
-    background: blue;
+    background: #62aae4;
     min-height: 80px;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-around;
     padding-top: 25px;
     gap: 20px;
 }
@@ -51,7 +66,7 @@ h3 {
 
 #footer {
     flex: 0 1 auto;
-    background: lightgrey;
+    background: #3993dd;
     height: 50px;
     display: flex;
     flex-flow: row wrap;
@@ -65,16 +80,16 @@ p {
 }
 
 button {
-    border: solid black 1px;
+    border: solid #3a3335 1px;
     border-radius: 5%;
-    width: 65px;
-    height: 65px;
-    background: lightgoldenrodyellow;
+    width: 70px;
+    height: 70px;
+    background: #E9C4E1;
 }
 
 button:active {
-    background: lightblue;
-    border: solid lightgrey 1px;
+    background: #dea6d2;
+    border: solid #E9C4E1 1px;
 }
 
 .start {
@@ -88,7 +103,6 @@ button:active {
 }
 
 #input-score-display {
-    background-color: lightblue;
     min-height: 100px;
     display: flex;
     flex-flow: column;
@@ -131,18 +145,43 @@ button:active {
 }
 
 #icon-attribution > div {
-    /* display: none; */
+    display: none;
     position: absolute;
     bottom: 50px;
     right: 0px;
     width: 220px;
-    background: lightgreen;
+    background: #dea6d2;
 }
 
 ul {
     list-style: none;
     padding: 0;
-    margin: 0px 10px;
+    margin: 5px 10px;
+}
+
+.hidden {
+    display: block !important;
+}
+
+.link {
+    background: none;
+    border: none;
+    width: auto;
+    height: auto;
+    text-decoration: none;
+    color: #3a3335;
+    font-family: serif;
+    font-size: 16px;
+}
+
+.link:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.link:active {
+    background: none;
+    border: none;
 }
 
 @media screen and (max-width: 510px) {

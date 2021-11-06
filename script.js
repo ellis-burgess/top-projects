@@ -7,12 +7,16 @@ const scoreTally = document.querySelector('#total-score');
 const playerScoreDisplay = document.getElementById('player-score');
 const computerScoreDisplay = document.getElementById('computer-score');
 const scoreDisplay = document.getElementById('score');
+const iconAttButton = document.getElementById('icon-attribution-button');
+const iconAttDiv = document.getElementById('icon-popup');
 
 let currentOutcome;
 let computerScore;
 let playerScore;
 
 startNewGame();
+
+iconAttButton.addEventListener('click', displayAttribution);
 
 playerButtons.forEach(function (button) {
     button.addEventListener('click', playRound);
@@ -28,8 +32,8 @@ function playRound(event) {
     let computerSelection = rockPaperScissors[(Math.floor(Math.random() * 3))];
     let computerButton = document.getElementById(`computer-${computerSelection}`);
 
-    computerButton.style.cssText = 'background: green;';
-    playerButton.style.cssText = 'background: green;';
+    computerButton.style.cssText = 'background: #dea6d2;';
+    playerButton.style.cssText = 'background: #dea6d2;';
 
     if (computerSelection == playerSelection) {
         result.textContent = `It's a draw! Try again...`;
@@ -99,11 +103,15 @@ function startNewGame() {
 
 function resetButtonsDisplay() {
     computerButtons.forEach((button) => {
-        button.style.cssText = 'background: white;';
+        button.style.cssText = 'background: #E9C4E1;';
     })
 
     playerButtons.forEach((button) => {
-        button.style.cssText = 'background: white;';
+        button.style.cssText = 'background: #E9C4E1;';
     })
     return;
+}
+
+function displayAttribution() {
+    iconAttDiv.classList.toggle('hidden');
 }
