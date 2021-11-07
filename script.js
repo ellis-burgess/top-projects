@@ -32,8 +32,8 @@ function playRound(event) {
     let computerSelection = rockPaperScissors[(Math.floor(Math.random() * 3))];
     let computerButton = document.getElementById(`computer-${computerSelection}`);
 
-    computerButton.style.cssText = 'background: #dea6d2;';
-    playerButton.style.cssText = 'background: #dea6d2;';
+    computerButton.style.cssText = 'background: #3a7470;';
+    playerButton.style.cssText = 'background: #3a7470;';
 
     if (computerSelection == playerSelection) {
         result.textContent = `It's a draw! Try again...`;
@@ -103,11 +103,11 @@ function startNewGame() {
 
 function resetButtonsDisplay() {
     computerButtons.forEach((button) => {
-        button.style.cssText = 'background: #E9C4E1;';
+        button.style.cssText = 'background: #679082;';
     })
 
     playerButtons.forEach((button) => {
-        button.style.cssText = 'background: #E9C4E1;';
+        button.style.cssText = 'background: #679082;';
     })
     return;
 }
