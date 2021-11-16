@@ -3,9 +3,10 @@ const gridsquares = []
 const resetButton = document.querySelector('#reset');
 const slider = document.getElementById("gridSizeRange");
 const sliderOutput = document.getElementById("sliderValue");
-const colorChangeButton = document.getElementById("colorChange");
+const colorSelection = document.getElementById("colorChange");
 
 let gridsize = slider.value;
+let color = colorSelection.value;
 
 sliderOutput.textContent = slider.value;
 
@@ -18,6 +19,9 @@ slider.addEventListener('mouseup', generateGrid);
 slider.addEventListener('input', function() {
     sliderOutput.textContent = this.value;
 })
+colorSelection.addEventListener('input', function() {
+    color = colorSelection.value;
+})
 
 
 function listenHover(e) {
@@ -26,7 +30,7 @@ function listenHover(e) {
         i.addEventListener('mouseenter', changeHover);
     });
     if (mousePosition.classList.contains('gridsquare')) {
-        mousePosition.style.background = 'red';
+        mousePosition.style.background = color;
     }
 }
 
@@ -37,7 +41,7 @@ function endListenHover() {
 }
 
 function changeHover(e) {
-    this.style.background = 'red';
+    this.style.background = color;
 }
 
 function generateGrid(e) {
