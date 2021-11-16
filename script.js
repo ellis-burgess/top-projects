@@ -1,18 +1,33 @@
 const container = document.querySelector('.container');
-let gridsize = 16
 const gridsquares = []
 const resetButton = document.querySelector('#reset');
+const slider = document.getElementById("gridSizeRange");
+const sliderOutput = document.getElementById("sliderValue");
+const colorChangeButton = document.getElementById("colorChange");
+
+let gridsize = slider.value;
+
+sliderOutput.textContent = slider.value;
 
 generateGrid();
 
 document.addEventListener('mousedown', listenHover);
 document.addEventListener('mouseup', endListenHover);
 resetButton.addEventListener('click', generateGrid);
+slider.addEventListener('mouseup', generateGrid);
+slider.addEventListener('input', function() {
+    sliderOutput.textContent = this.value;
+})
 
-function listenHover() {
+
+function listenHover(e) {
+    let mousePosition = e.path[0];
     gridsquares.forEach(function (i) {
         i.addEventListener('mouseenter', changeHover);
     });
+    if (mousePosition.classList.contains('gridsquare')) {
+        mousePosition.style.background = 'red';
+    }
 }
 
 function endListenHover() {
@@ -22,12 +37,10 @@ function endListenHover() {
 }
 
 function changeHover(e) {
-    this.classList.add("active");
+    this.style.background = 'red';
 }
 
 function generateGrid(e) {
-    console.log(resetButton);
-
     if (gridsquares.length) {
         for (let i = ((gridsize * gridsize) - 1); i >= 0; i--) {
             container.removeChild(gridsquares[i]);
@@ -35,17 +48,9 @@ function generateGrid(e) {
         gridsquares.length = 0;
     }
 
-    gridsize = prompt('Enter grid size (0-100', '16');
-    if ((gridsize < 1) || (gridsize > 100) || (isNaN(gridsize)))
-    {
-        alert('Invalid input.')
-        gridsize = 0;
-        return;
-    }
+    gridsize = slider.value;
 
     container.style.cssText = `display: grid;
-width: 600px;
-aspect-ratio: 1;
 grid-template: repeat(${gridsize}, 1fr) / repeat(${gridsize}, 1fr);
 justify-items: stretch;`;
 
@@ -53,6 +58,6 @@ justify-items: stretch;`;
         gridsquares[i] = document.createElement('div');
         gridsquares[i].classList.add("gridsquare");
         container.appendChild(gridsquares[i]);
-        gridsquares[i].classList.remove("active");
+        gridsquares[i].style.background = 'white';
     }
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,8 +9,17 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
+
 <body>
-    <button id="reset">Reset</button>
+    <h1>Etch-a-Sketch</h1>
     <div class="container"></div>
+    <div class="slidecontainer">
+        <h3>Grid size</h3>
+        <input type="range" min="1" max="100" value="16" class="slider" id="gridSizeRange">
+        <p id="sliderValue"></p>
+    </div>
+    <button id="reset">Reset</button>
+    <button id="colorChange">Click me!</button>
 </body>
+
 </html>
