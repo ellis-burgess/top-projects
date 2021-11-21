@@ -9,6 +9,11 @@ html {
 h1 {
     margin: auto;
     text-align: center;
+    padding: 20px;
+}
+
+button {
+    cursor: pointer;
 }
 
 .gridsquare {
@@ -17,7 +22,25 @@ h1 {
 
 .container {
     margin: auto;
-    border: 1px solid black;
+    box-shadow: 2px 2px 15px 0px #555;
     width: 40vw;
     aspect-ratio: 1;
+}
+
+label {
+    display: none;
+}
+
+#sidebar {
+    position: fixed;
+    background: #ddd;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 20vw;
+    min-width: 100px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
 }

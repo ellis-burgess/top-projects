@@ -4,6 +4,7 @@ const resetButton = document.querySelector('#reset');
 const slider = document.getElementById("gridSizeRange");
 const sliderOutput = document.getElementById("sliderValue");
 const colorSelection = document.getElementById("colorChange");
+const eraser = document.getElementById("eraser");
 
 let gridsize = slider.value;
 let color = colorSelection.value;
@@ -22,7 +23,12 @@ slider.addEventListener('input', function() {
 colorSelection.addEventListener('input', function() {
     color = colorSelection.value;
 })
-
+colorSelection.addEventListener('click', function() {
+    color = colorSelection.value;
+})
+eraser.addEventListener('click', function() {
+    color = '#FFFFFF';
+})
 
 function listenHover(e) {
     let mousePosition = e.path[0];
@@ -64,4 +70,5 @@ justify-items: stretch;`;
         container.appendChild(gridsquares[i]);
         gridsquares[i].style.background = 'white';
     }
+    color = colorSelection.value;
 }
