@@ -3,7 +3,6 @@ const startButton = document.querySelector('.start');
 const playerButtons = document.querySelectorAll('.playerinput');
 const computerButtons = document.querySelectorAll('.computerchoice');
 const result = document.querySelector('#results');
-const scoreTally = document.querySelector('#total-score');
 const playerScoreDisplay = document.getElementById('player-score');
 const computerScoreDisplay = document.getElementById('computer-score');
 const scoreDisplay = document.getElementById('score');
@@ -56,7 +55,7 @@ function playRound(event) {
         playerScore++;
     }
 
-    scoreDisplay.style.cssText = 'display: flex;';
+    scoreDisplay.style.cssText = 'visibility: visible;';
 
     playerScoreDisplay.textContent = playerScore;
     computerScoreDisplay.textContent = computerScore;
@@ -67,14 +66,13 @@ function playRound(event) {
 }
 
 function playGame() {
-    scoreTally.textContent = `Your score is ${playerScore} and the computer's score is ${computerScore}.`;
     if ((playerScore == 5) || (computerScore == 5)) {
         if (playerScore > computerScore) {
-            scoreTally.textContent += ` You win!`
+            result.textContent = ` You won the game!`
         } else {
-            scoreTally.textContent += ` You lose!`
+            result.textContent = ` You lost the game!`
         }
-        startButton.style.cssText = 'display: block;';
+        startButton.style.cssText = 'visibility: visible;';
         playerButtons.forEach(function (button) {
             button.removeEventListener('click', playRound);
         });
@@ -82,14 +80,14 @@ function playGame() {
 }
 
 function startNewGame() {
-    startButton.style.cssText = 'display: none;';
+    startButton.style.cssText = 'visibility: hidden;';
     playerButtons.forEach(function (button) {
         button.addEventListener('click', playRound);
     });
 
     resetButtonsDisplay();
 
-    scoreDisplay.style.cssText = 'display: none;';
+    scoreDisplay.style.cssText = 'visibility: hidden;';
 
     computerScore = 0;
     playerScore = 0;
@@ -97,8 +95,7 @@ function startNewGame() {
     playerScoreDisplay.textContent = '';
     computerScoreDisplay.textContent = '';
 
-    result.textContent = '';
-    scoreTally.textContent = 'Play rock, paper, or scissors to begin...';
+    result.textContent = 'Play rock, paper, or scissors to begin...';
 }
 
 function resetButtonsDisplay() {

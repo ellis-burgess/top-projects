@@ -24,6 +24,7 @@ html {
   #body {
     display: flex;
     flex-flow: column nowrap;
+    min-height: 570px;
     height: 95vh;
     border-radius: 20px;
     margin-top: 2.5vh;
@@ -99,6 +100,7 @@ button:active {
 .start {
     width: 100px;
     align-self: center;
+    margin: 10px;
 }
 
 .button-img {
