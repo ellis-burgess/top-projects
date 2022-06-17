@@ -12,10 +12,6 @@ h1 {
     padding: 20px;
 }
 
-button {
-    cursor: pointer;
-}
-
 .gridsquare {
     aspect-ratio: 1;
 }
@@ -32,7 +28,7 @@ label {
 }
 
 #sidebar {
-    position: fixed;
+    position: absolute;
     background: #ddd;
     top: 0;
     left: 0;
