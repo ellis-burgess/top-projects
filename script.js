@@ -1,10 +1,10 @@
 const container = document.querySelector('.container');
-const gridsquares = []
 const resetButton = document.querySelector('#reset');
 const slider = document.getElementById("gridSizeRange");
 const sliderOutput = document.getElementById("sliderValue");
 const colorSelection = document.getElementById("colorChange");
 const eraser = document.getElementById("eraser");
+const gridsquares = [];
 
 let gridsize = slider.value;
 let color = colorSelection.value;
@@ -46,11 +46,11 @@ function endListenHover() {
     })
 }
 
-function changeHover(e) {
+function changeHover() {
     this.style.background = color;
 }
 
-function generateGrid(e) {
+function generateGrid() {
     if (gridsquares.length) {
         for (let i = ((gridsize * gridsize) - 1); i >= 0; i--) {
             container.removeChild(gridsquares[i]);

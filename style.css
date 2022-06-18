@@ -1,5 +1,6 @@
 html {
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 *, *:before, *:after {
@@ -19,7 +20,7 @@ h1 {
 .container {
     margin: auto;
     box-shadow: 2px 2px 15px 0px #555;
-    width: 40vw;
+    width: 45vw;
     aspect-ratio: 1;
 }
 
@@ -39,4 +40,16 @@ label {
     flex-flow: column nowrap;
     justify-content: space-evenly;
     align-items: center;
+}
+
+#main {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 80vw;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    justify-content: flex-start;
 }
