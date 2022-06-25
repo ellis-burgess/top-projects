@@ -1,0 +1,27 @@
+#calculator {
+    border: 2px solid black;
+    display: grid;
+    grid-template-rows: min-content 1fr;
+}
+
+#lcd-display {
+    border: 1px solid red;
+}
+
+#btns {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+        ". . . clr"
+        "digits digits digits operators"
+        "digits digits digits operators"
+        "digits digits digits operators"
+        "digits digits digits operators";
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+#clr {
+    grid-area: clr;
+}
