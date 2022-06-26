@@ -17,6 +17,7 @@ h1 {
 #lcd-display {
     border: 1px solid red;
     padding: 10px;
+    text-align: right;
 }
 
 #btns {
@@ -33,7 +34,7 @@ h1 {
     grid-row-gap: 10px;
 }
 
-#clr {
+#clear {
     grid-area: clr;
 }
 

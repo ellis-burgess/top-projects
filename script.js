@@ -1,28 +1,26 @@
 const display = document.getElementById("lcd-display");
-const clear = document.getElementById("clr");
+const clear = document.getElementById("clear");
 const digits = document.querySelectorAll(".digit");
 const operators = document.querySelectorAll(".operator");
-const decimal = document.getElementById("point");
+const decimal = document.getElementById(".");
+
+const calculationArray = [];
 
 digits.forEach((digit) => {
-    digit.addEventListener('click', () => {
-        console.log(digit.id);
-    })
+    digit.addEventListener('click', logIdOfButton);
 })
 
 operators.forEach((operator) => {
-    operator.addEventListener('click', () => {
-        console.log(operator.id);
-    })
+    operator.addEventListener('click', logIdOfButton);
 })
 
-clear.addEventListener('click', () => {
-    console.log("Clear");
-})
+clear.addEventListener('click', logIdOfButton);
 
-decimal.addEventListener('click', () => {
-    console.log(".");
-})
+decimal.addEventListener('click', logIdOfButton);
+
+function logIdOfButton(e) {
+    console.log(e.target.id);
+}
 
 //functions for add, subtract, divide, and multiply
 
@@ -34,7 +32,7 @@ function subtractValues(a, b) {
     return Number(a) - Number(b);
 }
 
-function divideValues (a, b) {
+function divideValues(a, b) {
     return Number(a) / Number(b);
 }
 
