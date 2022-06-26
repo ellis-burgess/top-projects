@@ -25,3 +25,17 @@
 #clr {
     grid-area: clr;
 }
+
+#digits {
+    grid-area: digits;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+#operators {
+    grid-area: operators;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+}
