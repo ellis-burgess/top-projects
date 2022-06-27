@@ -44,6 +44,10 @@ function setOperand(e) {
 function evaluateEquation() {
     b = calculationArray.join('');
     display.textContent = operate(a, b, operand);
+    a = 'default';
+    b = 'default';
+    operand = 'default';
+    calculationArray.length = "0";
 }
 
 //functional clear button
@@ -51,6 +55,7 @@ function clearCalculator() {
     a = 'default';
     b = 'default';
     operand = 'default';
+    calculationArray.length = "0";
     display.textContent = "0";
 }
 
