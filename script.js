@@ -10,6 +10,8 @@ let a = 'default';
 let b = 'default';
 let operand = 'default';
 
+display.textContent = "0";
+
 digits.forEach((digit) => {
     digit.addEventListener('click', addDigit);
 })
@@ -18,15 +20,11 @@ operators.forEach((operator) => {
     operator.addEventListener('click', setOperand);
 })
 
-clear.addEventListener('click', logIdOfButton);
+clear.addEventListener('click', clearCalculator);
 
-decimal.addEventListener('click', logIdOfButton);
+decimal.addEventListener('click', addDigit);
 
 equals.addEventListener('click', evaluateEquation);
-
-function logIdOfButton(e) {
-    console.log(e.target.id);
-}
 
 //add digit to array
 function addDigit(e) {
@@ -46,6 +44,14 @@ function setOperand(e) {
 function evaluateEquation() {
     b = calculationArray.join('');
     display.textContent = operate(a, b, operand);
+}
+
+//functional clear button
+function clearCalculator() {
+    a = 'default';
+    b = 'default';
+    operand = 'default';
+    display.textContent = "0";
 }
 
 //functions for add, subtract, divide, and multiply
