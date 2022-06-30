@@ -4,11 +4,21 @@ const digits = document.querySelectorAll('.digit');
 const operators = document.querySelectorAll('.operator');
 const decimal = document.getElementById('.');
 const equals = document.getElementById('=');
+const allButtons = document.querySelectorAll('.btn');
 
 const calculationArray = [];
 let a = 'default';
 let b = 'default';
 let operand = 'default';
+
+//monitor for keyboard input
+document.addEventListener('keydown', (e) => {
+    allButtons.forEach((button) => {
+        if (button.id == e.key) {
+            document.getElementById(button.id).click();
+        }
+    })
+})
 
 display.textContent = "0";
 
@@ -90,6 +100,6 @@ function operate(a, b, operand) {
         case '*':
             return multiplyValues(a, b);
         default:
-            return 'Invalid operand';
+            return 'Error';
     }
 }
