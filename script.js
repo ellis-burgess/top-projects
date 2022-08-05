@@ -10,6 +10,7 @@ const calculationArray = [];
 let a = 'default';
 let b = 'default';
 let operand = 'default';
+let prevButtonPress = ''
 
 //monitor for keyboard input
 document.addEventListener('keydown', (e) => {
@@ -40,6 +41,8 @@ equals.addEventListener('click', evaluateEquation);
 function addDigit(e) {
     calculationArray.push(e.target.id);
     display.textContent = calculationArray.join('');
+    prevButtonPress = e.target.id;
+    console.log(prevButtonPress);
 }
 
 //set operand and current value
@@ -53,6 +56,8 @@ function setOperand(e) {
     display.textContent = e.target.id;
     a = calculationArray.join('');
     calculationArray.length = 0;
+    prevButtonPress = e.target.id;
+    console.log(prevButtonPress);
 }
 
 //set second value and evaluate equation on equals
@@ -63,6 +68,9 @@ function evaluateEquation() {
     b = 'default';
     operand = 'default';
     calculationArray.length = "0";
+    prevButtonPress = "=";
+    console.log(prevButtonPress);
+
 }
 
 //functional clear button
@@ -72,6 +80,8 @@ function clearCalculator() {
     operand = 'default';
     calculationArray.length = "0";
     display.textContent = "0";
+    prevButtonPress = "clr";
+    console.log(prevButtonPress);
 }
 
 //functions for add, subtract, divide, and multiply
