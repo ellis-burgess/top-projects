@@ -47,14 +47,9 @@ function addDigit(e) {
 
 //set operand and current value
 function setOperand(e) {
-    //process if no digits have been pressed yet
-    if (calculationArray.length == 0) {
-        a = display.textContent;
-    } else {
-        a = calculationArray.join('');
-    }
     //standard process
     operand = e.target.id;
+    a = Number(display.textContent);
     display.textContent = e.target.id;
     calculationArray.length = 0;
     prevButtonPress = e.target.id;
@@ -63,7 +58,7 @@ function setOperand(e) {
 
 //set second value and evaluate equation on equals
 function evaluateEquation() {
-    b = calculationArray.join('');
+    b = Number(display.textContent);
     display.textContent = operate(a, b, operand);
     a = 'default';
     b = 'default';
