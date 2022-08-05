@@ -44,6 +44,11 @@ function addDigit(e) {
 
 //set operand and current value
 function setOperand(e) {
+    //process if no digits have been pressed yet
+    if (calculationArray.length == 0) {
+        calculationArray.push("0");
+    }
+    //standard process
     operand = e.target.id;
     display.textContent = e.target.id;
     a = calculationArray.join('');
