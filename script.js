@@ -47,10 +47,13 @@ function addDigit(e) {
 
 //set operand and current value
 function setOperand(e) {
+    //if there is an unevaluated equation
+    if (operand != 'default') {
+        display.textContent = operate(a, Number(display.textContent), operand);
+    }
     //standard process
     operand = e.target.id;
     a = Number(display.textContent);
-    display.textContent = e.target.id;
     calculationArray.length = 0;
     prevButtonPress = e.target.id;
     console.log(prevButtonPress);

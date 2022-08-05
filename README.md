@@ -2,7 +2,8 @@
 
 A calculator using Javascript that can do basic calculations (two values with one operation).
 
-Works with button presses or keyboard input. Has no handling for any input beyond (value 1) (operator) (value 2) (equals).
+Works with button presses or keyboard input.
 
-To do:
- - Add functionality for more than 2 values (if user has already selected an operator and 2 values, the calculation will be run, then value 1 will equal the outcome)
+To Do
+ - Implement correct handling of a user inputting two operands in a row
+ - Update clear button to C/AC (clear current "waiting value" vs clear all inputs thus far)
