@@ -47,6 +47,11 @@ function addDigit(e) {
 
 //set operand and current value
 function setOperand(e) {
+    //if previous input was operand
+    if ((prevButtonPress == "+") || (prevButtonPress == "-") || (prevButtonPress == "*") || (prevButtonPress == "/")) {
+        operand = e.target.id;
+        return;
+    }
     //if there is an unevaluated equation
     if (operand != 'default') {
         display.textContent = operate(a, Number(display.textContent), operand);
