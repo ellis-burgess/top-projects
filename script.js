@@ -49,12 +49,13 @@ function addDigit(e) {
 function setOperand(e) {
     //process if no digits have been pressed yet
     if (calculationArray.length == 0) {
-        calculationArray.push("0");
+        a = display.textContent;
+    } else {
+        a = calculationArray.join('');
     }
     //standard process
     operand = e.target.id;
     display.textContent = e.target.id;
-    a = calculationArray.join('');
     calculationArray.length = 0;
     prevButtonPress = e.target.id;
     console.log(prevButtonPress);
