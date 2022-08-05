@@ -10,7 +10,7 @@ const calculationArray = [];
 let a = 'default';
 let b = 'default';
 let operand = 'default';
-let prevButtonPress = ''
+let prevButtonClass = '';
 
 //monitor for keyboard input
 document.addEventListener('keydown', (e) => {
@@ -41,14 +41,14 @@ equals.addEventListener('click', evaluateEquation);
 function addDigit(e) {
     calculationArray.push(e.target.id);
     display.textContent = calculationArray.join('');
-    prevButtonPress = e.target.id;
-    console.log(prevButtonPress);
+    prevButtonClass = "digit"
+    console.log(prevButtonClass);
 }
 
 //set operand and current value
 function setOperand(e) {
     //if previous input was operand
-    if ((prevButtonPress == "+") || (prevButtonPress == "-") || (prevButtonPress == "*") || (prevButtonPress == "/")) {
+    if (prevButtonClass == "operand") {
         operand = e.target.id;
         return;
     }
@@ -60,8 +60,8 @@ function setOperand(e) {
     operand = e.target.id;
     a = Number(display.textContent);
     calculationArray.length = 0;
-    prevButtonPress = e.target.id;
-    console.log(prevButtonPress);
+    prevButtonClass = "operand";
+    console.log(prevButtonClass);
 }
 
 //set second value and evaluate equation on equals
@@ -72,20 +72,32 @@ function evaluateEquation() {
     b = 'default';
     operand = 'default';
     calculationArray.length = "0";
-    prevButtonPress = "=";
-    console.log(prevButtonPress);
+    prevButtonClass = "equals"
+    console.log(prevButtonClass);
 
 }
 
 //functional clear button
 function clearCalculator() {
-    a = 'default';
-    b = 'default';
-    operand = 'default';
+    //C vs AC
+    if ((prevButtonClass == "clr") || (prevButtonClass == "operand")) {
+
+        console.log(prevButtonClass);
+    }
+
+    switch (prevButtonClass) {
+        case "clr":
+            a = 'default';
+            b = 'default';
+            operand = 'default';
+            prevButtonClass = "clr";
+            break;
+        case "operand":
+            prevButtonClass = "clr"
+            return;
+    }
     calculationArray.length = "0";
     display.textContent = "0";
-    prevButtonPress = "clr";
-    console.log(prevButtonPress);
 }
 
 //functions for add, subtract, divide, and multiply
