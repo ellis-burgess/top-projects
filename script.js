@@ -14,6 +14,7 @@ display.textContent = "0";
 
 // event listener for keyboard input
 document.addEventListener('keydown', (e) => {
+    console.log(e.key);
     allButtons.forEach((button) => {
         if (button.id == e.key) {
             document.getElementById(button.id).click();
@@ -22,6 +23,16 @@ document.addEventListener('keydown', (e) => {
     // treat pressing 'enter' as pressing 'equals'
     if (e.key === 'Enter') {
         equals.click();
+    }
+    // if user presses backspace, remove last input digit
+    if (e.key === 'Backspace') {
+        if (displayArray.length > 1) {
+        displayArray.pop();
+        display.textContent = displayArray.join('');
+        } else {
+            displayArray.length = 0;
+            display.textContent = "0";
+        }
     }
 })
 
