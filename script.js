@@ -60,16 +60,16 @@ function addDigit(e) {
 
 // set operand and current value
 function setOperand(e) {
-    // if previous input was operand, overwrite
+    // if previous input was operand, overwrite operand and return
     if (prevButtonClass == "operand") {
         operand = e.target.id;
         return;
     }
-    // if there is an unevaluated equation
+    // if there is an unevaluated equation, evaluate before setting new operand and "a"
     if (operand != 'default') {
         display.textContent = operate(a, Number(display.textContent), operand);
     }
-    // set operand
+    // set operand and "a"
     operand = e.target.id;
     a = Number(display.textContent);
     displayArray.length = 0;
@@ -90,23 +90,19 @@ function evaluateEquation() {
 
 // functional clear button
 function clearCalculator() {
-    // C vs AC
-    if ((prevButtonClass == "clr") || (prevButtonClass == "operand")) {
-
-        console.log(prevButtonClass);
-    }
-
     switch (prevButtonClass) {
+        // If clear is pressed twice consecutively, reset all values
         case "clr":
-            a = 'default';
-            b = 'default';
+            a = b = 0;
             operand = 'default';
-            prevButtonClass = "clr";
             break;
+        // If last input was an operand, only reset the operand
         case "operand":
+            operand = 'default';
             prevButtonClass = "clr"
             return;
     }
+    prevButtonClass = 'clr'
     displayArray.length = 0;
     display.textContent = "0";
 }
@@ -127,6 +123,7 @@ function operate(a, b, operand) {
         case '*':
             return Number(a) * Number(b);
         default:
-            return 'Error';
+            // if operand has not been set
+            return Number(display.textContent);
     }
 }
