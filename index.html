@@ -11,68 +11,62 @@
 <body>
     <header>
         <h1>Rock, Paper, Scissors</h1>
-    <header>
+    </header>
 
     <main>
-        <div id="input-score-display">
-            <div id="ui-buttons">
-                <div id="player-buttons">
-                    <h2>Choose Your Weapon</h2>
-                    <div class="button-set">
-                        <div>
-                            <button class="playerinput" id="rock"><img class="button-img"
-                                src="images/clenched-fist.png" alt="rock"/>
-                                <p>Rock</p>
-                            </button>
-                        </div>
-                        <div>
-                            <button class="playerinput" id="paper"><img class="button-img"
-                                src="images/hand.png" alt="paper"/>
-                            <p>Paper</p>
-                        </button>
-                            
-                        </div>
-                        <div>
-                            <button class="playerinput" id="scissors"><img class="button-img"
-                                src="images/hand-scissors.png" alt="scissors"/>
-                            <p>Scissors</p>
-                        </button>
-                        </div>
-                    </div>
+        <div id="ui-buttons">
+            <div id="player-buttons" class="buttons">
+                <h2>Choose Your Weapon</h2>
+                <div>
+                    <button class="playerinput" id="rock"><img class="button-img"
+                        src="images/clenched-fist.png" alt="rock"/>
+                    </button>
+                    <p>Rock</p>
                 </div>
-                <div id="computer-buttons">
-                    <h2>Computer's Choice</h2>
-                    <div class="button-set">
-                        <div>
-                            <button class="computerchoice" id="computer-rock">
-                                <img class="button-img"
-                                src="images/clenched-fist.png" alt="rock"/>
-                                <p>Rock</p>
-                            </button>
-                    </div>
-                        <div>
-                            <button class="computerchoice" id="computer-paper">
-                                <img class="button-img"
-                                src="images/hand.png" alt="paper"/>
-                                <p>Paper</p>
-                            </button>
-                    </div>
-                        <div>
-                            <button class="computerchoice" id="computer-scissors">
-                                <img class="button-img"
-                                src="images/hand-scissors.png" alt="scissors"/>
-                                <p>Scissors</p>
-                            </button>
-                    </div>
-                    </div>
+                <div>
+                    <button class="playerinput" id="paper"><img class="button-img"
+                        src="images/hand.png" alt="paper"/>
+                </button>
+                <p>Paper</p>                    
+                </div>
+                <div>
+                    <button class="playerinput" id="scissors"><img class="button-img"
+                        src="images/hand-scissors.png" alt="scissors"/>
+                </button>
+                <p>Scissors</p>
                 </div>
             </div>
-            <h3 id="score">0 - 0</h3>
+            
+            <div id="computer-buttons" class="buttons">
+                <h2>Computer's Choice</h2>
+                <div>
+                    <button class="computerchoice" id="computer-rock">
+                        <img class="button-img"
+                        src="images/clenched-fist.png" alt="rock"/>
+                    </button>
+                    <p>Rock</p>
+                </div>
+                <div>
+                    <button class="computerchoice" id="computer-paper">
+                        <img class="button-img"
+                        src="images/hand.png" alt="paper"/>
+                    </button>
+                    <p>Paper</p>
+                </div>
+                <div>
+                    <button class="computerchoice" id="computer-scissors">
+                        <img class="button-img"
+                        src="images/hand-scissors.png" alt="scissors"/>
+                    </button>
+                    <p>Scissors</p>
+                </div>
+            </div>
         </div>
 
-        <p id="results">Play rock, paper, or scissors to begin...</p>
+    <h3 id="score">0 - 0</h3>
+    <p id="results">Play rock, paper, or scissors to begin...</p>
 
-        <button class="start">New Game</button>
+    <button class="start">New Game</button>
     </main>
 
     <footer>

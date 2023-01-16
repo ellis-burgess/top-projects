@@ -23,15 +23,17 @@ startButton.addEventListener('click', startNewGame);
 
 function playRound(event) {
     resetButtonsDisplay();
-
+    // get user's selection, randomly select computer's selection
     let playerSelection = this.id;
     let playerButton = document.getElementById(this.id);
     let computerSelection = rockPaperScissors[(Math.floor(Math.random() * 3))];
     let computerButton = document.getElementById(`computer-${computerSelection}`);
 
+    // darken background colour of selections
     computerButton.style.cssText = 'background: #3a7470;';
     playerButton.style.cssText = 'background: #3a7470;';
 
+    // determine whether outcome was win, draw, or lose
     if (computerSelection == playerSelection) {
         result.textContent = `It's a draw! Try again...`;
         outcome = 'draw'
@@ -52,15 +54,10 @@ function playRound(event) {
         playerScore++;
     }
 
-    scoreDisplay.style.cssText = 'visibility: visible;';
+    // Update score display
     scoreDisplay.textContent = `${playerScore} - ${computerScore}`
 
-    playGame();
-
-    return;
-}
-
-function playGame() {
+    // If either player has enough points to win the game, display the result, end the game, and allow player to start a new game
     if ((playerScore == 5) || (computerScore == 5)) {
         if (playerScore > computerScore) {
             result.textContent = ` You won the game!`
@@ -72,17 +69,21 @@ function playGame() {
             button.removeEventListener('click', playRound);
         });
     }
+
+    return;
 }
 
 function startNewGame() {
+    // Hide start button and add event listeners to user buttons
     startButton.style.cssText = 'visibility: hidden;';
     playerButtons.forEach(function (button) {
         button.addEventListener('click', playRound);
     });
-
+    
+    // Reset display elements and scores
     resetButtonsDisplay();
 
-    scoreDisplay.style.cssText = 'visibility: hidden;';
+    scoreDisplay.textContent = '0 - 0';
 
     computerScore = 0;
     playerScore = 0;

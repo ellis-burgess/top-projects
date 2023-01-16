@@ -8,20 +8,20 @@ brown: 443222
 */
 
 html {
+    height: 100vh;
     box-sizing: border-box;
     background: #3a7470;
     background-image: url("images/background.png");
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 body {
     display: flex;
     flex-flow: column nowrap;
-    min-height: 570px;
-    height: 95vh;
-    border-radius: 20px;
-    margin-top: 2.5vh;
+    min-height: 95%;
+    border-radius: 5%;
     color: #443222;
 }
 
@@ -32,16 +32,11 @@ h1, h3 {
 
 p {
     font-size: 1.2em;
+    text-align: center;
 }
 
 header {
     background: #c5d0ba;
-    display: block;
-    height: 75px;
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: center;
 }
 
 main {
@@ -56,54 +51,37 @@ main {
 }
 
 footer {
-    flex: 0 1 auto;
     background: #c5d0ba;
-    height: 50px;
     display: flex;
     flex-flow: row wrap;
-    align-items: center;
     justify-content: space-between;
-    padding: 10px;
-}
-
-p {
-    text-align: center;
+    padding: 0.8em;
 }
 
 button {
-    margin: 5px 0px 0px 0px;
-    border: solid #443222 1px;
+    border: solid #443222 2px;
     border-radius: 5%;
     width: 70px;
     height: 70px;
-    background: #679082;
-    font-size: 16px;
-    color: #f6f3df
+    color: #443222;
 }
 
 button:active {
-    background: #3a7470;
     border: solid #679082 1px;
 }
 
 .start {
     width: 100px;
     align-self: center;
-    margin: 10px;
+    margin: 1em;
+    background: #679082;
+    color: #f6f3df;
+    font-size: 1.2em;
 }
 
 .button-img {
     width: 50px;
     height: 50px;
-    margin-top: 5px;
-    margin-bottom: 20px;
-}
-
-#input-score-display {
-    display: flex;
-    flex-flow: column;
-    align-items: space-around;
-    justify-content: center;
 }
 
 #ui-buttons {
@@ -113,33 +91,27 @@ button:active {
     justify-content: space-around;
 }
 
-#score {
-    display: flex;
-    flex-flow: row;
-    align-items: center;
-    justify-content: space-around;
-    margin: 0px 10vw;
-}
-
-#player-buttons, #computer-buttons {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
+.buttons {
+    display: grid;
+    grid-template-areas:
+        "title title title"
+        "buttons buttons buttons";
     justify-content: center;
+    gap: 0.5em;
     padding: 20px 20px;
+    text-align: center;
 }
 
-.button-set {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+.buttons > h2 {
+    grid-area: title;
+}
+
+.buttons > div > p {
+    margin: 0;
 }
 
 #icon-attribution {
     position: relative;
-    top: -5px;
 }
 
 #icon-popup {
@@ -149,7 +121,7 @@ button:active {
     right: 0px;
     width: 220px;
     background: #3a7470;
-    border-radius: 15px;
+    border-radius: 1em;
 }
 
 li > a {
@@ -159,7 +131,7 @@ li > a {
 ul {
     list-style: none;
     padding: 0;
-    margin: 5px 10px;
+    margin: 0.5em;
 }
 
 .hidden {
