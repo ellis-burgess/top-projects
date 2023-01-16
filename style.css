@@ -15,38 +15,27 @@ html {
     justify-content: center;
 }
 
-*, *:before, *:after {
-    box-sizing: inherit;
-    margin: 0;
-    color: #443222;
-}
-
-  #body {
+body {
     display: flex;
     flex-flow: column nowrap;
     min-height: 570px;
     height: 95vh;
     border-radius: 20px;
     margin-top: 2.5vh;
-    overflow: hidden;
+    color: #443222;
 }
 
-h1 {
+h1, h3 {
     text-align: center;
     font-family: sans-serif;
 }
 
-h3 {
-    text-align: center;
-}
-
 p {
-    font-size: 18px;
+    font-size: 1.2em;
 }
 
-#title-section {
+header {
     background: #c5d0ba;
-    flex: 0 1 auto;
     display: block;
     height: 75px;
     display: flex;
@@ -55,7 +44,7 @@ p {
     justify-content: center;
 }
 
-#gameplay-section {
+main {
     flex: 1 1 auto;
     background: #f6f3df;
     display: flex;
@@ -66,7 +55,7 @@ p {
     gap: 20px;
 }
 
-#footer {
+footer {
     flex: 0 1 auto;
     background: #c5d0ba;
     height: 50px;

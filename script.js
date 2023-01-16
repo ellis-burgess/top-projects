@@ -3,13 +3,11 @@ const startButton = document.querySelector('.start');
 const playerButtons = document.querySelectorAll('.playerinput');
 const computerButtons = document.querySelectorAll('.computerchoice');
 const result = document.querySelector('#results');
-const playerScoreDisplay = document.getElementById('player-score');
-const computerScoreDisplay = document.getElementById('computer-score');
 const scoreDisplay = document.getElementById('score');
 const iconAttButton = document.getElementById('icon-attribution-button');
 const iconAttDiv = document.getElementById('icon-popup');
 
-let currentOutcome;
+let outcome;
 let computerScore;
 let playerScore;
 
@@ -48,17 +46,14 @@ function playRound(event) {
         outcome = 'player'
     }
 
-    currentOutcome = outcome;
-    if (currentOutcome == 'computer') {
+    if (outcome == 'computer') {
         computerScore++;
-    } else if (currentOutcome == 'player') {
+    } else if (outcome == 'player') {
         playerScore++;
     }
 
     scoreDisplay.style.cssText = 'visibility: visible;';
-
-    playerScoreDisplay.textContent = playerScore;
-    computerScoreDisplay.textContent = computerScore;
+    scoreDisplay.textContent = `${playerScore} - ${computerScore}`
 
     playGame();
 
@@ -91,9 +86,6 @@ function startNewGame() {
 
     computerScore = 0;
     playerScore = 0;
-
-    playerScoreDisplay.textContent = '';
-    computerScoreDisplay.textContent = '';
 
     result.textContent = 'Play rock, paper, or scissors to begin...';
 }

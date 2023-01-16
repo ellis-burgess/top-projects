@@ -1,105 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <title>Rock, Paper, Scissors</title>
 </head>
 
 <body>
-    <div id=body>
-        <div id="title-section">
-            <h1>Rock, Paper, Scissors</h1>
-        </div>
-        <div id="gameplay-section">
-            <div id="input-score-display">
-                <div id="ui-buttons">
-                    <div id="player-buttons">
-                        <h2>Choose Your Weapon</h2>
-                        <div class="button-set">
-                            <div>
-                                <button class="playerinput" id="rock"><img class="button-img"
-                                    src="images/clenched-fist.png" alt="rock"/>
-                                 <p>Rock</p>
-                                </button>
-                               
-                            </div>
-                            <div>
-                                <button class="playerinput" id="paper"><img class="button-img"
-                                    src="images/hand.png" alt="paper"/>
+    <header>
+        <h1>Rock, Paper, Scissors</h1>
+    <header>
+
+    <main>
+        <div id="input-score-display">
+            <div id="ui-buttons">
+                <div id="player-buttons">
+                    <h2>Choose Your Weapon</h2>
+                    <div class="button-set">
+                        <div>
+                            <button class="playerinput" id="rock"><img class="button-img"
+                                src="images/clenched-fist.png" alt="rock"/>
+                                <p>Rock</p>
+                            </button>
+                        </div>
+                        <div>
+                            <button class="playerinput" id="paper"><img class="button-img"
+                                src="images/hand.png" alt="paper"/>
+                            <p>Paper</p>
+                        </button>
+                            
+                        </div>
+                        <div>
+                            <button class="playerinput" id="scissors"><img class="button-img"
+                                src="images/hand-scissors.png" alt="scissors"/>
+                            <p>Scissors</p>
+                        </button>
+                        </div>
+                    </div>
+                </div>
+                <div id="computer-buttons">
+                    <h2>Computer's Choice</h2>
+                    <div class="button-set">
+                        <div>
+                            <button class="computerchoice" id="computer-rock">
+                                <img class="button-img"
+                                src="images/clenched-fist.png" alt="rock"/>
+                                <p>Rock</p>
+                            </button>
+                    </div>
+                        <div>
+                            <button class="computerchoice" id="computer-paper">
+                                <img class="button-img"
+                                src="images/hand.png" alt="paper"/>
                                 <p>Paper</p>
                             </button>
-                                
-                            </div>
-                            <div>
-                                <button class="playerinput" id="scissors"><img class="button-img"
-                                    src="images/hand-scissors.png" alt="scissors"/>
+                    </div>
+                        <div>
+                            <button class="computerchoice" id="computer-scissors">
+                                <img class="button-img"
+                                src="images/hand-scissors.png" alt="scissors"/>
                                 <p>Scissors</p>
                             </button>
-                            </div>
-                        </div>
                     </div>
-                    <div id="computer-buttons">
-                        <h2>Computer's Choice</h2>
-                        <div class="button-set">
-                            <div>
-                                <button class="computerchoice" id="computer-rock">
-                                    <img class="button-img"
-                                    src="images/clenched-fist.png" alt="rock"/>
-                                    <p>Rock</p>
-                                </button>
-                        </div>
-                            <div>
-                                <button class="computerchoice" id="computer-paper">
-                                    <img class="button-img"
-                                    src="images/hand.png" alt="paper"/>
-                                    <p>Paper</p>
-                                </button>
-                        </div>
-                            <div>
-                                <button class="computerchoice" id="computer-scissors">
-                                    <img class="button-img"
-                                    src="images/hand-scissors.png" alt="scissors"/>
-                                    <p>Scissors</p>
-                                </button>
-                        </div>
-                        </div>
                     </div>
                 </div>
-                <div id="score">
-                    <h3 id="player-score"></h3>
-                    <h3>-</h3>
-                    <h3 id="computer-score"></h3>
-                </div>
             </div>
-
-            <div id="results-div">
-                <p id="results"></p>
-            </div>
-
-            <button class="start">New Game</button>
+            <h3 id="score">0 - 0</h3>
         </div>
-        <div id="footer">
-            <a href="https://github.com/ellis-burgess/" class="link">Created by Ellis Burgess</a>
-            <div id="icon-attribution">
-                <button id="icon-attribution-button" class="link">Icon attribution</button>
-                <div id="icon-popup">
-                    <ul>
-                        <li><a href="https://icons8.com/icon/44376/hand-scissors" class="link">Hand Scissors icon by
-                                Icons8</a></li>
-                        <li><a href="https://icons8.com/icon/6643/clenched-fist" class="link">Clenched Fist icon by
-                                Icons8</a></li>
-                        <li><a href="https://icons8.com/icon/2727/hand" class="link">Hand icon by Icons8</a></li>
-                    </ul>
-                </div>
+
+        <p id="results">Play rock, paper, or scissors to begin...</p>
+
+        <button class="start">New Game</button>
+    </main>
+
+    <footer>
+        <a href="https://github.com/ellis-burgess/" class="link">Created by Ellis Burgess</a>
+        <div id="icon-attribution">
+            <button id="icon-attribution-button" class="link">Icon attribution</button>
+            <div id="icon-popup">
+                <ul>
+                    <li><a href="https://icons8.com/icon/44376/hand-scissors" class="link">Hand Scissors icon by
+                            Icons8</a></li>
+                    <li><a href="https://icons8.com/icon/6643/clenched-fist" class="link">Clenched Fist icon by
+                            Icons8</a></li>
+                    <li><a href="https://icons8.com/icon/2727/hand" class="link">Hand icon by Icons8</a></li>
+                </ul>
             </div>
         </div>
-    </div>
-
+    </footer>
+    <script src="script.js" defer></script>
 </body>
-
 </html>
