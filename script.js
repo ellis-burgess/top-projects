@@ -34,6 +34,10 @@ document.addEventListener('keydown', (e) => {
             display.textContent = "0";
         }
     }
+    // treat user pressing 'ESCAPE' as C/AC
+    if (e.key == 'Escape') {
+        clear.click();
+    }
 })
 
 // event listeners for button presses
