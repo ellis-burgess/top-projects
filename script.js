@@ -31,7 +31,7 @@ eraser.addEventListener('click', function() {
 })
 
 function listenHover(e) {
-    let mousePosition = e.path[0];
+    let mousePosition = e.composedPath()[0];
     gridsquares.forEach(function (i) {
         i.addEventListener('mouseenter', changeHover);
     });
@@ -61,8 +61,8 @@ function generateGrid() {
     gridsize = slider.value;
 
     container.style.cssText = `display: grid;
-grid-template: repeat(${gridsize}, 1fr) / repeat(${gridsize}, 1fr);
-justify-items: stretch;`;
+        grid-template: repeat(${gridsize}, 1fr) / repeat(${gridsize}, 1fr);
+        justify-items: stretch;`;
 
     for (let i = 0; i < (gridsize * gridsize); i++) {
         gridsquares[i] = document.createElement('div');
