@@ -9,9 +9,7 @@ def caesar_cipher(str, offset)
 
     if lowers === val || uppers === val
       new_val = val + offset
-      unless lowers === new_val || uppers === new_val
-        new_val -= 26
-      end
+      new_val -= 26 unless lowers === new_val || uppers === new_val
       str.setbyte(i, new_val)
     end
 
@@ -20,5 +18,3 @@ def caesar_cipher(str, offset)
 
   puts str
 end
-
-caesar_cipher("", 1)
