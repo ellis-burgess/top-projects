@@ -4,8 +4,9 @@ def caesar_cipher(str, offset)
   lowers = 97..122
   uppers = 65..90
 
-  while str.getbyte(i) do
+  loop do
     val = str.getbyte(i)
+    break if !(val)
 
     if lowers === val || uppers === val
       new_val = val + offset
