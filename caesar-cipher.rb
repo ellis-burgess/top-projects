@@ -3,6 +3,7 @@ def caesar_cipher(str, offset)
   i = 0
   lowers = 97..122
   uppers = 65..90
+  str = str.dup
 
   loop do
     val = str.getbyte(i)
