@@ -12,6 +12,6 @@ I have included some basic error handling (raising a TypeError if either argumen
 - [ ] Enable bidirectional cipher (offset by negative or positive)
 
 ## Substring
-A program that, given a string and a dictionary, returns how many times each dictionary entry appears in the string (case insensitive).
+A program that, given a string and a dictionary, returns how many times each dictionary entry appears in the string (case insensitive). Also works with an array containing strings. Includes error handling.
 
 Uses the String.scan method to search for all matches of a word to the string, and add one to the dictionary entry for that word for each match.
