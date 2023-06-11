@@ -4,6 +4,11 @@ def substrings(str, dictionary)
       "Invalid type. Please use a string or an array."
   end
 
+  if str.is_a?(Array) && str.any? { |word| !(word.is_a?(String)) }
+    raise TypeError,
+      "All array items must be strings."
+  end
+
   unless dictionary.is_a?(Array)
     raise TypeError,
       "Please only use an array for your dictionary"
