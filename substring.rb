@@ -18,8 +18,10 @@ def substrings(str, dictionary)
   str = str.dup.join if str.is_a?(Array)
   str = str.downcase
 
+  dictionary = dictionary.dup.split if dictionary.is_a?(String)
+
   dictionary.each do |word|
-    word = word.downcase
+    word = word.downcase.sub(/\p{P}$/, '')
     str.scan(word) { |word| substrings_found[word] += 1 }
   end
 
