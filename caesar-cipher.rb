@@ -7,7 +7,7 @@ def caesar_cipher(str, offset)
   unless offset.is_a?(Integer)
     raise TypeError,
       "Can only use integer for a caesar cipher"
-    end
+  end
 
   offset = offset % 26
   i = 0
