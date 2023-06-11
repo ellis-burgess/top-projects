@@ -9,7 +9,7 @@ def caesar_cipher(str, offset)
       "Can only use integer for a caesar cipher"
     end
 
-  offset = offset % 26 if offset > 26
+  offset = offset % 26
   i = 0
   lowers = 97..122
   uppers = 65..90
@@ -17,7 +17,7 @@ def caesar_cipher(str, offset)
 
   loop do
     val = str.getbyte(i)
-    break if !(val)
+    break unless val
 
     if lowers === val || uppers === val
       new_val = val + offset
