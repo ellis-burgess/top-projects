@@ -9,9 +9,9 @@ def substrings(str, dictionary)
       "All array items must be strings."
   end
 
-  unless dictionary.is_a?(Array)
+  unless dictionary.is_a?(Array) || dictionary.is_a?(String)
     raise TypeError,
-      "Please only use an array for your dictionary"
+      "Please only use an array or string for your dictionary"
   end
 
   substrings_found = Hash.new(0)
