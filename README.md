@@ -10,3 +10,8 @@ I have included some basic error handling (raising a TypeError if either argumen
 - [ ] Modify to accept files
 - [ ] Modify to return file
 - [ ] Enable bidirectional cipher (offset by negative or positive)
+
+## Substring
+A program that, given a string and a dictionary, returns how many times each dictionary entry appears in the string (case insensitive).
+
+Uses the String.scan method to search for all matches of a word to the string, and add one to the dictionary entry for that word for each match.
