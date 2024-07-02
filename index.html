@@ -10,49 +10,35 @@
 <body>
   <header>
     <div>
-      <img src="/imgs/odin-logo.png" alt="Odin logo">
+      <img src="/imgs/odin-logo.png" alt="Odin logo" class="logo">
       <h1>Odin</h1>
     </div>
+    <p>Photo by <a href="https://unsplash.com/@haliewestphoto">Halie West</a> on <a href="https://unsplash.com/">Unsplash</a></p>
   </header>
   <main>
-    <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.</p>
-    <p>You <em>know</em> you want to.</p>
+    <div class="cta-container">
+      <p class="call-to-action">This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.</p>
+      <p class="call-to-action">You <em>know</em> you want to.</p>
+    </div>
     <form action="">
-      <h2>Let's do this!</h2>
-      <ul>
-        <li>
+        <div class="form-fields">
+            <h2>Let's do this!</h2>    
           <label for="first-name">First name</label>
-          <input type="text" name="first-name" id="first-name">
-        </li>
-        <li>
+          <input type="text" name="first-name" id="first-name" required>
           <label for="last-name">Last name</label>
-          <input type="text" name="last-name" id="last-name">
-        </li>
-        <li>
+          <input type="text" name="last-name" id="last-name" required>
           <label for="mail">Email</label>
-          <input type="email" name="mail" id="mail">
-        </li>
-        <li>
+          <input type="email" name="mail" id="mail" required>
           <label for="number">Phone number</label>
-          <input type="tel" name="phons-number" id="number">
-        </li>
-        <li>
+          <input type="tel" name="phons-number" id="number" required>
           <label for="pword">Password</label>
-          <input type="password" name="password" id="pword">
-        </li>
-        <li>
+          <input type="password" name="password" id="pword" placeholder="* Passwords do not match" required>
           <label for="conf-pword">Confirm password</label>
-          <input type="password" id="conf-pword">
-        </li>
-        <li>
-          <button type="submit">Create Account</button>
-        </li>
-      </ul>
+          <input type="password" id="conf-pword" required>
+      </div>
+        <button type="submit">Create Account</button>
       <p>Already have an account? <a href="#">Log in</a></p>
     </form>
   </main>
-  <footer>
-    <p>Photo by <a href="https://unsplash.com/@haliewestphoto">Halie West</a> on <a href="https://unsplash.com/">Unsplash</a></p>
-  </footer>
 </body>
 </html>
