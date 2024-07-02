@@ -22,23 +22,35 @@
     </div>
     <form action="">
         <div class="form-fields">
-            <h2>Let's do this!</h2>    
-          <label for="first-name">First name</label>
-          <input type="text" name="first-name" id="first-name" required>
-          <label for="last-name">Last name</label>
-          <input type="text" name="last-name" id="last-name" required>
-          <label for="mail">Email</label>
-          <input type="email" name="mail" id="mail" required>
-          <label for="number">Phone number</label>
-          <input type="tel" name="phons-number" id="number" required>
-          <label for="pword">Password</label>
-          <input type="password" name="password" id="pword" placeholder="* Passwords do not match" required>
-          <label for="conf-pword">Confirm password</label>
-          <input type="password" id="conf-pword" required>
+          <h2>Let's do this!</h2>    
+          <div class="form-entry">
+            <label for="first-name">First name</label>
+            <input type="text" name="first-name" id="first-name" required>
+          </div>
+          <div class="form-entry">
+            <label for="last-name">Last name</label>
+            <input type="text" name="last-name" id="last-name" required>
+          </div>
+          <div class="form-entry">
+            <label for="mail">Email</label>
+            <input type="email" name="mail" id="mail" required>
+          </div>
+          <div class="form-entry">
+            <label for="number">Phone number</label>
+            <input type="tel" name="phons-number" id="number" required>
+          </div>
+          <div class="form-entry">
+            <label for="pword">Password</label>
+            <input type="password" name="password" id="pword" placeholder="* Passwords do not match" required>
+          </div>
+          <div class="form-entry">
+            <label for="conf-pword">Confirm password</label>
+            <input type="password" id="conf-pword" required>
+          </div>
       </div>
         <button type="submit">Create Account</button>
-      <p>Already have an account? <a href="#">Log in</a></p>
     </form>
+    <p>Already have an account? <a href="#">Log in</a></p>
   </main>
 </body>
 </html>
