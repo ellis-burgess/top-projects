@@ -8,6 +8,8 @@
 
 :root {
   box-sizing: border-box;
+  --warning-color: #BB3030;
+  --btn-color: #596D48
 }
 
 *, *::before, *::after {
@@ -106,6 +108,7 @@ label {
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-end;
+  padding-bottom: 2rem;
 }
 
 .call-to-action {
@@ -121,4 +124,41 @@ button {
 
 main p {
   margin: 0.5rem var(--lr-padding);
+}
+
+input {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.3em;
+}
+
+label {
+  text-transform: uppercase;
+  font-size: 0.7em;
+  letter-spacing: 0.2em;
+}
+
+input:focus {
+  box-shadow: 4px 4px 5px #bbb;
+}
+
+#conf-pword:valid::placeholder,
+#pword:valid::placeholder {
+  display: hidden;
+}
+
+#conf-pword:invalid,
+#pword:invalid {
+  outline: 1px solid var(--warning-color);
+}
+
+#pword:invalid+span {
+  display: block;
+  color: var(--warning-color);
+}
+
+#pword:valid+span {
+  display: none;
 }
