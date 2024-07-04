@@ -72,7 +72,9 @@ main {
   width: 70%;
   height: 100%;
   background: #eee;
-  --lr-padding: max(6rem, 10vw);
+  --lr-padding: max(12rem, 20vw);
+  --l-padding: calc(var(--lr-padding) * 0.2);
+  --r-padding: calc(var(--lr-padding) * 0.8);
 }
 
 form {
@@ -86,7 +88,7 @@ form {
 .form-fields {
   background: #fff;
   box-shadow: 10px 5px 5px #ddd;
-  padding: 1em var(--lr-padding);
+  padding: 1em var(--r-padding) 1em var(--l-padding);
   height: 80%;
   width: 100%;
   display: grid;
@@ -109,7 +111,7 @@ label {
   flex-flow: column nowrap;
   justify-content: flex-end;
   padding-bottom: 2rem;
-  margin: 0 var(--lr-padding);
+  margin: 0 var(--r-padding) 0 var(--l-padding);
 }
 
 .call-to-action {
@@ -121,7 +123,7 @@ label {
 }
 
 button {
-  margin: 0.5rem var(--lr-padding);
+  margin: 0.5rem var(--r-padding) 0.5rem var(--l-padding);
   font-size: 1rem;
   padding: 0.8em 2.5em;
   font-weight: bold;
@@ -133,7 +135,7 @@ button {
 }
 
 main > p {
-  margin: 0.5rem var(--lr-padding);
+  margin: 0.5rem var(--r-padding) 0.5rem var(--l-padding);
   margin-top: 2em;
 }
 
