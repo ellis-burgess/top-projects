@@ -18,7 +18,8 @@ header {
   grid-area: header;
   display: grid;
   grid-template: 50px 1fr / 2fr 1fr;
-  grid-template-areas: "searchbar profile" "welcome btns"
+  grid-template-areas: "searchbar profile" "welcome btns";
+  box-shadow: 2px 4px 4px 0px rgba(85,85,85,0.5);
 }
 
 .searchbar {
@@ -67,6 +68,26 @@ main {
 
 .sidebar {
   grid-area: sidebar;
+}
+
+.sidebar-grid {
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: 80px 1fr 1fr;
+}
+
+.nav-header {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.sidebar-grid > ul {
+  display: grid;
+  gap: 0.5em;
+  align-items: center;
+  grid-template-rows: repeat(auto-fill, minmax(40px, 1fr));
 }
 
 img {
