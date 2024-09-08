@@ -1,0 +1,4 @@
+This is a fake Google I made for The Odin Project. Unfortunately finished just a little too late to submit my result, but figured I might as well keep it here anyway!
+I learned a lot by making this "Foogle". In reading about headers and footers, I found out that using unordered lists makes way more sense for nav bars than trying to use flex. I also gained a lot of experience in simply writing things in HTML and CSS. As I went along, I found myself getting more and more into a "flow," stopping to look things up or check that the code I was writing looked how I expected less and less often.
+
+Update November 2022: Coming back to look at this project over a year later, there are now several parts of both the HTML and CSS I would do differently. For example, I'd merge the stylesheets into one and restructure some of the HTML to reduce the use of non-semantic tags.
