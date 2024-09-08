@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</head>
+<body>
+  <header>
+    <div class="searchbar">
+      <box-icon name="search"></box-icon>
+      <input type="search" name="search" id="search">
+    </div>
+    <div class="profile-details">
+      <box-icon name="bell"></box-icon>
+      <img src="https://picsum.photos/200" alt="Random image (profile image placeholder)" class="profile-pic">
+      <p class="user">John Smith</p>
+    </div>
+
+    <div class="welcome">
+      <img src="https://picsum.photos/200" alt="Random image (profile image placeholder)" class="profile-pic">
+      <p>Welcome,</p>
+      <h2>John Smith (@username)</h2>
+    </div>
+    <div class="btns">
+      <button type="button">New</button>
+      <button type="button">Upload</button>
+      <button type="button">Share</button>
+    </div>
+  </header>
+
+  <nav class="sidebar">
+    <div class="sidebar-grid">
+      <div class="nav-header">
+        <box-icon type='solid' name='dashboard'></box-icon>
+        <h1>Dashboard</h1>
+      </div>
+      <ul class="main-pages">
+        <li>
+          <box-icon name="home" type="solid"></box-icon>
+          Home
+        </li>
+        <li>
+          <box-icon type="solid" name="id-card"></box-icon>
+          Profile
+        </li>
+        <li>
+          <box-icon name="message" type="solid"></box-icon>
+          Messages
+        </li>
+        <li>
+          <box-icon name="time" type="solid"></box-icon>
+          History
+        </li>
+        <li>
+          <box-icon name="file-blank" type="solid"></box-icon>
+          Tasks
+        </li>
+        <li>
+          <box-icon name="group" type="solid"></box-icon>
+          Communities
+        </li>
+      </ul>
+      <ul class="user-pages">
+        <li>
+          <box-icon type="solid" name="cog"></box-icon>
+          Settings
+        </li>
+        <li>
+          <box-icon type="solid" name="help-circle"></box-icon>
+          Help
+        </li>
+        <li>
+          <box-icon type="solid" name="check-shield"></box-icon>
+          Privacy
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="projects">
+      <h2>Your Projects</h2>
+      <div class="project-card">
+        <h3>Project 1</h3>
+        <p>Lorem Ipsum sed tempus ut lacus ut scelersque. Suspendisse sollicitudin nibh erat, id fascillisis felis accumsan nec.</p>
+        <div class="icons">
+          <box-icon name="star"></box-icon>
+          <box-icon name="glasses"></box-icon>
+          <box-icon name="git-branch"></box-icon>
+        </div>
+      </div>
+      <div class="project-card">
+        <h3>Project 2</h3>
+        <p>Lorem Ipsum sed tempus ut lacus ut scelersque. Suspendisse sollicitudin nibh erat, id fascillisis felis accumsan nec.</p>
+        <div class="icons">
+          <box-icon name="star"></box-icon>
+          <box-icon name="glasses"></box-icon>
+          <box-icon name="git-branch"></box-icon>
+        </div>
+      </div>
+      <div class="project-card">
+        <h3>Project 3</h3>
+        <p>Lorem Ipsum sed tempus ut lacus ut scelersque. Suspendisse sollicitudin nibh erat, id fascillisis felis accumsan nec.</p>
+        <div class="icons">
+          <box-icon name="star"></box-icon>
+          <box-icon name="glasses"></box-icon>
+          <box-icon name="git-branch"></box-icon>
+        </div>
+      </div>
+      <div class="project-card">
+        <h3>Project 4</h3>
+        <p>Lorem Ipsum sed tempus ut lacus ut scelersque. Suspendisse sollicitudin nibh erat, id fascillisis felis accumsan nec.</p>
+        <div class="icons">
+          <box-icon name="star"></box-icon>
+          <box-icon name="glasses"></box-icon>
+          <box-icon name="git-branch"></box-icon>
+        </div>
+      </div>
+      <div class="project-card">
+        <h3>Project 5</h3>
+        <p>Lorem Ipsum sed tempus ut lacus ut scelersque. Suspendisse sollicitudin nibh erat, id fascillisis felis accumsan nec.</p>
+        <div class="icons">
+          <box-icon name="star"></box-icon>
+          <box-icon name="glasses"></box-icon>
+          <box-icon name="git-branch"></box-icon>
+        </div>
+      </div>
+      <div class="project-card">
+        <h3>Project 6</h3>
+        <p>Lorem Ipsum sed tempus ut lacus ut scelersque. Suspendisse sollicitudin nibh erat, id fascillisis felis accumsan nec.</p>
+        <div class="icons">
+          <box-icon name="star"></box-icon>
+          <box-icon name="glasses"></box-icon>
+          <box-icon name="git-branch"></box-icon>
+        </div>
+      </div>
+    </div>
+    
+    <div class="announcements-container">
+      <h2>Announcements</h2>
+      <div class="announcements">
+        <h3>Site Maintenance</h3>
+        <p>The website is going to be maintained. Praesent convalis, libero quis congue elementum, nunc ante faucibus sapien, ac scelerisque tortor purus sit amet ex.</p>
+        <h3>Community Share Day</h3>
+        <p>We've got big community plans! In hac habitasse platea dictumst. Vivamus dictum rutrum acru, a placerat velit sagittis id.</p>
+        <h3>Updated Privacy Policy</h3>
+        <p>We've made some updates to our privacy policy, and these changes will affect you. Quisque eget rutrum nisl. Nam augue justo, cursus vitae metus vel.</p>
+      </div>
+    </div>
+
+    <div class="trending-container">
+      <h2>Trending</h2>
+      <div class="trending">
+        <div>
+          <img src="https://picsum.photos/200" alt="">
+          <h3>@username</h3>
+          <p>User Account Description</p>
+        </div>
+        <div>
+          <img src="https://picsum.photos/200" alt="">
+          <h3>@username</h3>
+          <p>User Account Description</p>
+        </div>
+        <div>
+          <img src="https://picsum.photos/200" alt="">
+          <h3>@username</h3>
+          <p>User Account Description</p>
+        </div>
+        <div>
+          <img src="https://picsum.photos/200" alt="">
+          <h3>@username</h3>
+          <p>User Account Description</p>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
