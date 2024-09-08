@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <div>
+      <img src="./imgs/odin-logo.png" alt="Odin logo" class="logo">
+      <h1>Odin</h1>
+    </div>
+    <p>Photo by <a href="https://unsplash.com/@haliewestphoto">Halie West</a> on <a href="https://unsplash.com/">Unsplash</a></p>
+  </header>
+  <main>
+    <div class="cta-container">
+      <p class="call-to-action">This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.</p>
+      <p class="call-to-action">You <em>know</em> you want to.</p>
+    </div>
+    <form action="">
+        <div class="form-fields">
+          <h2>Let's do this!</h2>    
+          <div class="form-entry">
+            <label for="first-name">First name</label>
+            <input type="text" name="first-name" id="first-name" required>
+          </div>
+          <div class="form-entry">
+            <label for="last-name">Last name</label>
+            <input type="text" name="last-name" id="last-name" required>
+          </div>
+          <div class="form-entry">
+            <label for="mail">Email</label>
+            <input type="email" name="mail" id="mail" required>
+          </div>
+          <div class="form-entry">
+            <label for="number">Phone number</label>
+            <input type="tel" name="phons-number" id="number" required>
+          </div>
+          <div class="form-entry">
+            <label for="pword">Password</label>
+            <input type="password" name="password" id="pword" required>
+            <span class="mismatch">
+              <span aria-label="warning">* </span>
+              Passwords do not match</span>
+          </div>
+          <div class="form-entry">
+            <label for="conf-pword">Confirm password</label>
+            <input type="password" id="conf-pword" required>
+          </div>
+      </div>
+        <button type="submit">Create Account</button>
+    </form>
+    <p>Already have an account? <a href="#">Log in</a></p>
+  </main>
+</body>
+</html>
