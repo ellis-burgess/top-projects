@@ -1,0 +1,160 @@
+/*
+COLOUR PALETTE
+deep teal: 3a7470
+paler teal: 679082
+pale green: c5d0ba
+beige: f6f3df
+brown: 443222
+*/
+
+html {
+    height: 100vh;
+    box-sizing: border-box;
+    background: #3a7470;
+    background-image: url("images/background.png");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    min-height: 95%;
+    border-radius: 5%;
+    color: #443222;
+}
+
+h1, h3 {
+    text-align: center;
+    font-family: sans-serif;
+}
+
+p {
+    font-size: 1.2em;
+    text-align: center;
+}
+
+header {
+    background: #c5d0ba;
+}
+
+main {
+    flex: 1 1 auto;
+    background: #f6f3df;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 25px;
+    gap: 20px;
+}
+
+footer {
+    background: #c5d0ba;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 0.8em;
+}
+
+button {
+    border: solid #443222 2px;
+    border-radius: 5%;
+    width: 70px;
+    height: 70px;
+    color: #443222;
+}
+
+button:active {
+    border: solid #679082 1px;
+}
+
+.start {
+    width: 100px;
+    align-self: center;
+    margin: 1em;
+    background: #679082;
+    color: #f6f3df;
+    font-size: 1.2em;
+}
+
+.button-img {
+    width: 50px;
+    height: 50px;
+}
+
+#ui-buttons {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.buttons {
+    display: grid;
+    grid-template-areas:
+        "title title title"
+        "buttons buttons buttons";
+    justify-content: center;
+    gap: 0.5em;
+    padding: 20px 20px;
+    text-align: center;
+}
+
+.buttons > h2 {
+    grid-area: title;
+}
+
+.buttons > div > p {
+    margin: 0;
+}
+
+#icon-attribution {
+    position: relative;
+}
+
+#icon-popup {
+    display: none;
+    position: absolute;
+    bottom: 25px;
+    right: 0px;
+    width: 220px;
+    background: #3a7470;
+    border-radius: 1em;
+}
+
+li > a {
+    color: #f6f3df !important;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.5em;
+}
+
+.hidden {
+    display: block !important;
+}
+
+.link {
+    background: none;
+    border: none;
+    width: auto;
+    height: auto;
+    text-decoration: none;
+    color: #443222;
+    font-family: serif;
+    font-size: 16px;
+}
+
+.link:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.link:active {
+    background: none;
+    border: none;
+}
